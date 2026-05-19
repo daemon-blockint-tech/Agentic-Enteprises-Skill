@@ -1,14 +1,61 @@
 ---
 name: data-scientist
 description: |
-  Guides data science workflows from exploration to production.
-  Covers machine learning modeling, statistical analysis, A/B testing, causal inference,
+  Execute data science workflows from exploration to production.
+  Apply machine learning modeling, statistical analysis, A/B testing, causal inference,
   feature engineering, model evaluation, and MLOps patterns.
-  Use when building predictive models, designing experiments, analyzing data statistically,
-  productionizing ML, debugging model performance, or choosing algorithms and tools.
+  Triggers on "build predictive model", "design A/B test", "feature engineering",
+  "model evaluation", "causal inference", "productionize ML", "choose ML algorithm",
+  "statistical analysis", "model monitoring", or "data science workflow".
 ---
 
 # Data Scientist
+
+## Overview
+
+Execute data science workflows from exploration to production. This skill covers machine learning
+modeling, statistical analysis, A/B testing, causal inference, feature engineering, model evaluation,
+and MLOps patterns.
+
+## Features
+
+- ML modeling lifecycle: problem framing, data prep, model selection, training, evaluation
+- Statistical analysis: hypothesis testing, regression, ANOVA, Bayesian methods
+- A/B testing: experiment design, sample size calculation, statistical power, result interpretation
+- Causal inference: propensity score matching, difference-in-differences, instrumental variables
+- Feature engineering: encoding, scaling, selection, dimensionality reduction
+- MLOps: model deployment, monitoring, drift detection, retraining triggers
+
+## Usage
+
+1. Identify the user's data science need (modeling, analysis, experimentation, or MLOps)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: model cards, experiment reports, feature engineering pipelines, or MLOps runbooks
+
+## Examples
+
+- **User**: "Build a churn prediction model"
+  **Agent**: Runs ML Modeling workflow, frames problem, selects features, trains classifier, evaluates with precision/recall, produces model card
+
+- **User**: "Design an A/B test"
+  **Agent**: Runs Experiment Design workflow, calculates sample size, defines success metrics, sets up randomization, produces experiment plan
+
+- **User**: "Monitor model drift"
+  **Agent**: Runs MLOps workflow, defines drift metrics, sets up monitoring dashboard, configures retraining triggers
+
+## When to Use
+
+- Scoping ML problems, baselines, feature engineering, and model evaluation
+- Designing A/B tests, power analysis, or causal inference when experiments are infeasible
+- Productionizing models (batch, real-time, monitoring, retraining triggers)
+- Selecting ML, stats, or MLOps tools for a given problem and data regime
+
+## When NOT to Use
+
+- Executive dashboards, KPI definitions, or BI storytelling → use `bi-analyst`
+- Warehouse dimensional modeling or ETL idempotency patterns → use `data-warehouse-engineer`
+- Prompt design, LLM agents, or guardrailed GenAI features → use `prompt-engineer`
+- Revenue metrics (ARR, NRR) or ASC 606 accounting → use `senior-revenue-accountant`
 
 ## Core Workflows
 
@@ -46,8 +93,6 @@ description: |
    - Add monitoring (prediction drift, latency)
    - Document retraining triggers
 
-**See `references/ml_modeling.md` for algorithm selection, feature engineering patterns, and evaluation metrics.**
-
 ### 2. Statistical Analysis & Experimentation
 
 **A/B testing workflow:**
@@ -65,8 +110,6 @@ description: |
 - Propensity score matching
 - Instrumental variables
 - Regression discontinuity
-
-**See `references/analytics_statistics.md` for test selection, power analysis, and causal methods.**
 
 ### 3. Productionizing Models (MLOps)
 
@@ -86,8 +129,6 @@ description: |
 - [ ] Error rate and fallback behavior
 - [ ] Business metric tracking
 
-**See `references/mlops_production.md` for deployment patterns, monitoring, feature stores, and CI/CD.**
-
 ### 4. Tool Selection
 
 | Task | Recommended Tools |
@@ -100,12 +141,3 @@ description: |
 | Causal inference | CausalML, DoWhy, EconML |
 | Interpretability | SHAP, LIME, ELI5 |
 | Deployment | FastAPI, BentoML, Seldon, SageMaker |
-
-**See `references/tools_frameworks.md` for environment setup, library comparisons, and code patterns.**
-
-## When to Load References
-
-- **ML modeling** → `references/ml_modeling.md`
-- **Statistics & experiments** → `references/analytics_statistics.md`
-- **MLOps & production** → `references/mlops_production.md`
-- **Tools & frameworks** → `references/tools_frameworks.md`

@@ -1,14 +1,60 @@
 ---
 name: ontology-engineer
 description: |
-  Guides ontology engineering and knowledge graph construction using semantic web standards
-  and enterprise graph technologies. Covers OWL, RDF, RDFS, SPARQL, linked data, graph databases
-  (Neo4j, Amazon Neptune), entity resolution, taxonomy construction, and reasoning.
-  Use when designing ontologies, building knowledge graphs, modeling domain knowledge,
-  writing SPARQL/Cypher queries, or implementing semantic web and enterprise data integration.
+  Design ontologies and build knowledge graphs.
+  Cover OWL/RDF ontologies, SKOS taxonomies, SPARQL querying, knowledge graph construction,
+  semantic reasoning, and linked data patterns.
+  Triggers on "build ontology", "design knowledge graph", "create taxonomy",
+  "SPARQL query", "semantic reasoning", "linked data", "RDF modeling",
+  "ontology alignment", or "knowledge representation".
 ---
 
 # Ontology Engineer
+
+## Overview
+
+Design ontologies and build knowledge graphs. This skill covers OWL/RDF ontologies, SKOS taxonomies,
+SPARQL querying, knowledge graph construction, semantic reasoning, and linked data patterns.
+
+## Features
+
+- OWL/RDF ontology design: classes, properties, restrictions, axioms
+- SKOS taxonomy creation: concepts, hierarchies, labels, mappings
+- SPARQL querying: SELECT, CONSTRUCT, ASK, DESCRIBE patterns
+- Knowledge graph construction: data extraction, entity resolution, graph loading
+- Semantic reasoning: rule-based inference, OWL reasoning, consistency checking
+- Linked data patterns: URIs, dereferencing, RDF serialization, data publishing
+
+## Usage
+
+1. Identify the user's ontology need (design, taxonomy, querying, or knowledge graph)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: OWL files, SKOS taxonomies, SPARQL queries, or knowledge graph schemas
+
+## Examples
+
+- **User**: "Design an ontology for products"
+  **Agent**: Runs Ontology Design workflow, defines classes (Product, Category, Feature), properties (hasCategory, hasFeature), produces OWL file
+
+- **User**: "Write a SPARQL query"
+  **Agent**: Runs Querying workflow, constructs SELECT query with graph patterns, filters, and aggregations
+
+- **User**: "Build a knowledge graph"
+  **Agent**: Runs Knowledge Graph Construction workflow, extracts entities, resolves duplicates, loads into triple store
+
+## When to Use
+
+- Scoping domains with competency questions and designing OWL/RDF ontologies
+- Building knowledge graphs, entity resolution, and linked-data integration
+- Writing SPARQL, Cypher, or graph validation and reasoning workflows
+- Selecting semantic-web or property-graph tools and reuse from public ontologies
+
+## When NOT to Use
+
+- Relational warehouse star schemas or batch ETL → use `data-warehouse-engineer`
+- Enterprise data platform vendor selection or mesh operating model → use `data-architect`
+- LLM system prompts, agents, or RAG orchestration → use `prompt-engineer`
+- Business requirements workshops without semantic modeling → use `business-analyst`
 
 ## Core Workflows
 
@@ -41,8 +87,6 @@ description: |
    - Verify competency questions with SPARQL
    - Review with domain experts
 
-**See `references/ontology_design.md` for modeling patterns, anti-patterns, and reuse strategies.**
-
 ### 2. Knowledge Graph Construction
 
 **Construction pipeline:**
@@ -66,8 +110,6 @@ description: |
    - Load into triple store or graph database
    - Validate graph completeness and quality
 
-**See `references/knowledge_graphs.md` for extraction pipelines, resolution techniques, and graph database patterns.**
-
 ### 3. Querying & Retrieval
 
 **Choose query language by store type:**
@@ -78,8 +120,6 @@ description: |
 | Labeled property graph | Cypher | Neo4j, pattern matching, path queries |
 | GraphQL | GraphQL+ | API-layer graph queries |
 | Gremlin | Gremlin | Traversal-heavy, multi-model graphs |
-
-**See `references/semantic_web.md` for SPARQL patterns and `references/knowledge_graphs.md` for Cypher patterns.**
 
 ### 4. Validation & Reasoning
 
@@ -95,12 +135,3 @@ description: |
 - [ ] No orphan classes or properties
 - [ ] URIs are dereferenceable or resolvable
 - [ ] Labels and descriptions in multiple languages if needed
-
-**See `references/ontology_design.md` for reasoning profiles and validation frameworks.**
-
-## When to Load References
-
-- **Semantic web standards** → `references/semantic_web.md`
-- **Knowledge graphs** → `references/knowledge_graphs.md`
-- **Ontology design patterns** → `references/ontology_design.md`
-- **Tools & frameworks** → `references/tools_frameworks.md`

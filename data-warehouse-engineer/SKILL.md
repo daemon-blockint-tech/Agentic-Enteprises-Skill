@@ -1,14 +1,63 @@
 ---
 name: data-warehouse-engineer
 description: |
-  Guides data warehouse engineering across Snowflake, BigQuery, Databricks, and Redshift.
-  Covers SQL query optimization, dimensional data modeling (star/snowflake schemas, SCDs),
-  and ETL pipeline design (incremental loads, CDC, idempotency, orchestration).
-  Use when tuning slow queries, designing fact/dimension tables, building ETL pipelines,
-  choosing a warehouse platform, or debugging data quality issues in warehouse workloads.
+  Design and implement data warehouses.
+  Cover star/snowflake schemas, dimensional modeling, SQL optimization, ETL/ELT patterns,
+  partitioning strategies, and warehouse-specific features (Snowflake, BigQuery, Redshift).
+  Triggers on "design star schema", "optimize SQL query", "build ETL pipeline",
+  "warehouse partitioning", "dimensional modeling", "data warehouse design",
+  "query performance tuning", or "warehouse migration".
+  For dbt project structure, staging/mart layers, incremental models, and analytics CI, use
+  analytics-data-engineer—not data-warehouse-engineer alone.
 ---
 
 # Data Warehouse Engineer
+
+## Overview
+
+Design and implement data warehouses. This skill covers star/snowflake schemas, dimensional modeling,
+SQL optimization, ETL/ELT patterns, partitioning strategies, and warehouse-specific features
+(Snowflake, BigQuery, Redshift).
+
+## Features
+
+- Dimensional modeling: star schema, snowflake schema, fact/dimension table design
+- SQL optimization: query tuning, indexing, materialized views, partition pruning
+- ETL/ELT patterns: incremental loads, CDC, data quality checks, error handling
+- Partitioning strategies: range, list, hash, and composite partitioning
+- Warehouse-specific features: Snowflake clustering, BigQuery partitioning, Redshift sort keys
+
+## Usage
+
+1. Identify the user's warehouse need (schema design, SQL optimization, ETL, or partitioning)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: ER diagrams, optimized SQL queries, ETL pipeline designs, or partitioning plans
+
+## Examples
+
+- **User**: "Design a star schema for sales"
+  **Agent**: Runs Dimensional Modeling workflow, identifies fact table (sales), dimension tables (date, product, customer, region), creates ER diagram
+
+- **User**: "Optimize a slow query"
+  **Agent**: Runs SQL Optimization workflow, analyzes execution plan, recommends indexes, rewrites query with CTEs
+
+- **User**: "Set up incremental loads"
+  **Agent**: Runs ETL/ELT workflow, designs CDC pattern, implements watermark-based extraction, adds data quality checks
+
+## When to Use
+
+- Diagnosing slow warehouse SQL and improving partition, cluster, or join plans
+- Designing star/snowflake schemas, SCDs, and fact/dimension tables
+- Building idempotent, incremental, or CDC ETL with observability and quality checks
+- Comparing Snowflake, BigQuery, Databricks, or Redshift syntax and trade-offs
+
+## When NOT to Use
+
+- Enterprise-wide data mesh, governance pillars, or compliance program design → use `data-architect`
+- BI dashboard layout, chart selection, or stakeholder-facing metrics → use `bi-analyst`
+- dbt layers, mart tests, exposures, and analytics engineering workflows → use `analytics-data-engineer`
+- ML feature stores, model serving, or experiment analysis → use `data-scientist`
+- On-call leadership for the full data platform org → use `data-system-ops-lead`
 
 ## Core Workflows
 
@@ -25,8 +74,6 @@ description: |
 7. Consider materialized views or pre-aggregated summary tables for repeated patterns
 8. Document the before/after execution time and cost
 
-**See `references/sql_optimization.md` for platform-specific EXPLAIN syntax, partition strategies, and tuning patterns.**
-
 ### 2. Data Model Design
 
 **Decision tree:**
@@ -36,8 +83,6 @@ description: |
 - Tracking historical changes in dimensions? → **Slowly Changing Dimension (SCD) type 2**
 - Event-based data with high volume? → **Fact table with partitioning on event date**
 - Need real-time-ish analytics? → **Streaming ingestion + micro-batch fact tables**
-
-**See `references/data_modeling.md` for full SCD patterns, bridge tables, and degenerate dimensions.**
 
 ### 3. ETL Pipeline Design
 
@@ -51,8 +96,6 @@ description: |
 | Observability | Row counts, null rates, freshness checks logged per run |
 | Error handling | Dead-letter queue for bad records; fail loudly on schema drift |
 
-**See `references/etl_patterns.md` for CDC patterns, orchestration templates (Airflow/dbt), and data quality checks.**
-
 ### 4. Platform Selection Quick Reference
 
 | Need | Best Fit |
@@ -61,12 +104,3 @@ description: |
 | Tight GCP integration, nested/repeated fields | BigQuery |
 | ML + Spark + SQL in one lakehouse | Databricks |
 | AWS-native, predictable cost at scale | Redshift |
-
-**See `references/platform_cheatsheets.md` for syntax differences, data types, and gotchas per platform.**
-
-## When to Load References
-
-- **SQL tuning details** → `references/sql_optimization.md`
-- **Schema design details** → `references/data_modeling.md`
-- **Pipeline patterns** → `references/etl_patterns.md`
-- **Platform-specific syntax** → `references/platform_cheatsheets.md`

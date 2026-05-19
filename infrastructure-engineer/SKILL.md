@@ -1,14 +1,75 @@
 ---
 name: infrastructure-engineer
 description: |
-  Guides infrastructure engineering across cloud (AWS/GCP/Azure), DevOps/platform engineering,
-  and on-premise/hybrid environments. Covers VPC design, compute, storage, networking, IAM,
-  serverless, CI/CD, Kubernetes, Terraform/Pulumi, monitoring, virtualization, and security hardening.
-  Use when designing infrastructure, provisioning resources, building CI/CD pipelines, managing
-  containers, automating platforms, or troubleshooting infrastructure issues.
+  Design and implement cloud infrastructure.
+  Cover cloud architecture, IaC (Terraform, Pulumi), CI/CD pipelines, container orchestration (Kubernetes),
+  networking, observability, and security hardening.
+  Triggers on "design cloud infrastructure", "set up Terraform", "configure Kubernetes",
+  "build CI/CD pipeline", "infrastructure monitoring", "network architecture",
+  "security hardening", "infrastructure cost optimization", or "platform engineering". For day-2
+  Kubernetes cluster operations—Helm rollouts, add-ons, RBAC, GitOps sync, workload troubleshooting,
+  use cluster-deployment-engineer. For data center facility design, power/cooling, rack layout,
+  and build commissioning, use data-center-design-execution-lead. For on-prem compute utilization,
+  GPU/CPU supply planning, stranded kW, and hardware refresh efficiency, use
+  data-center-compute-supply-efficiency. For on-site colo smart-hands, rack-and-stack, cabling,
+  and physical acceptance, use field-services-engineer. Compute accounting:
+  compute-accounting-manager.
 ---
 
 # Infrastructure Engineer
+
+## Overview
+
+Design and implement cloud infrastructure. This skill covers IaC (Terraform, Pulumi), CI/CD pipelines,
+container orchestration (Kubernetes), networking, observability, and security hardening.
+
+## Features
+
+- Infrastructure as Code: Terraform modules, Pulumi stacks, state management, drift detection
+- CI/CD pipelines: pipeline essentials, deployment strategies, environment promotion, rollback procedures
+- Container orchestration: Kubernetes architecture, Helm charts, service mesh, autoscaling
+- Networking: VPC design, load balancers, DNS, CDN, private endpoints
+- Observability: metrics, logs, traces, alerting, dashboards
+- Security hardening: IAM policies, encryption, network security, compliance controls
+
+## Usage
+
+1. Identify the user's infrastructure need (IaC, CI/CD, Kubernetes, networking, observability, or security)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: Terraform configs, pipeline definitions, Kubernetes manifests, or architecture diagrams
+
+## Examples
+
+- **User**: "Set up Terraform for AWS"
+  **Agent**: Runs IaC workflow, creates module structure, configures state backend, produces VPC, EC2, and RDS resources
+
+- **User**: "Build a CI/CD pipeline"
+  **Agent**: Runs CI/CD workflow, designs pipeline with build/test/deploy stages, adds environment promotion and rollback
+
+- **User**: "Configure Kubernetes autoscaling"
+  **Agent**: Runs Kubernetes workflow, sets up HPA based on CPU/memory, configures cluster autoscaler, tests scaling behavior
+
+## When to Use
+
+- Designing cloud or hybrid networks, compute, storage, and IAM patterns
+- Building CI/CD, GitOps, Kubernetes, or IaC (Terraform/Pulumi/CloudFormation)
+- Implementing observability, SRE practices, and infrastructure incident response
+- Hardening infrastructure for security and compliance (SOC 2, ISO 27001, etc.)
+
+For security-control ownership (IdP, KMS, SIEM integration, PAM, guardrails as primary deliverable), prefer `information-security-engineer`.
+
+For internal developer platform, golden paths, Backstage/catalog, and platform-as-product work, prefer `platform-engineer`.
+
+## When NOT to Use
+
+- Data warehouse modeling, ETL, or analytics pipeline SLAs → use `data-warehouse-engineer` or `data-system-ops-lead`
+- Data governance catalogs, quality SLAs, or steward workflows → use `data-architect` or `data-manager`
+- LLM prompt/agent design or production guardrails → use `prompt-engineer`
+- Technical documentation or research synthesis deliverables → use `tech-writer-researcher`
+- Cross-service solution architecture before build → use `senior-system-architecture`
+- K8s cluster workload deploy, upgrades, and in-cluster troubleshooting → use `cluster-deployment-engineer`
+- Data center design, MEP, colo build, and facility commissioning → use `data-center-design-execution-lead`
+- Physical compute utilization, supply forecast, consolidation, refresh → use `data-center-compute-supply-efficiency`
 
 ## Core Workflows
 
@@ -42,8 +103,6 @@ description: |
    - Pulumi for programmatic (Python/TS)
    - Ansible for configuration management
 
-**See `references/cloud_infrastructure.md` for VPC patterns, storage options, and IAM best practices.**
-
 ### 2. CI/CD & Platform Automation
 
 **Pipeline essentials:**
@@ -51,8 +110,6 @@ description: |
 - GitOps with ArgoCD/Flux for K8s
 - Feature flags for progressive rollout
 - Automated rollback on failure
-
-**See `references/devops_platform.md` for pipeline templates, K8s patterns, and GitOps workflows.**
 
 ### 3. Monitoring & Reliability
 
@@ -68,8 +125,6 @@ description: |
 - Rate limiting: token bucket, leaky bucket
 - Bulkheads: isolate failure domains
 
-**See `references/devops_platform.md` for SRE practices, SLI/SLO/SLA definitions, and incident response.**
-
 ### 4. Security & Compliance
 
 **Security by layer:**
@@ -78,12 +133,3 @@ description: |
 - Data: Encryption at rest (KMS) and in transit (TLS 1.3)
 - Application: Secrets management, vulnerability scanning
 - Compliance: SOC 2, ISO 27001, GDPR, HIPAA controls
-
-**See `references/security_compliance.md` for hardening guides, compliance frameworks, and secrets management.**
-
-## When to Load References
-
-- **Cloud infrastructure** → `references/cloud_infrastructure.md`
-- **DevOps & platform** → `references/devops_platform.md`
-- **Hybrid & on-premise** → `references/hybrid_onprem.md`
-- **Security & compliance** → `references/security_compliance.md`

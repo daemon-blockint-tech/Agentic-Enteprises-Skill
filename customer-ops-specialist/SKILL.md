@@ -1,14 +1,67 @@
 ---
 name: customer-ops-specialist
 description: |
-  Guides customer operations across customer success, support, and revenue operations.
-  Covers customer onboarding, health scoring, renewal management, ticket triage, SLA management,
+  Manage customer operations across success, support, and revenue operations.
+  Cover customer onboarding, health scoring, renewal management, ticket triage, SLA management,
   knowledge base development, billing operations, dunning, refunds, and customer metrics.
-  Use when managing customer relationships, resolving support issues, processing billing inquiries,
-  designing onboarding flows, or optimizing customer-facing operational processes.
+  Triggers on "customer onboarding", "support ticket triage", "billing inquiry", "churn analysis",
+  "health score", "SLA management", "dunning process", "customer success playbook",
+  "renewal management", "CSAT review", or "customer ops". Exec/VIP and public community
+  escalation program: community-executive-escalations-program-manager. Monetization product
+  (pricing, paywalls): product-management-monetization.
 ---
 
-# Customer Operation Specialist
+# Customer Operations Specialist
+
+## Overview
+
+Manage customer operations across success, support, and revenue operations. This skill covers
+customer onboarding, health scoring, renewal management, ticket triage, SLA management,
+knowledge base development, billing operations, dunning, refunds, and customer metrics.
+
+## Features
+
+- Customer onboarding playbook with milestone tracking
+- Health score framework with leading indicators and risk signals
+- Renewal management workflow with expansion opportunity identification
+- Ticket triage and SLA management with escalation paths
+- Billing operations: dunning sequences, refund processing, subscription changes
+- Customer metrics: CSAT, NPS, NRR, GRR, churn rate, time-to-resolution
+
+## Usage
+
+1. Identify the user's customer ops need (onboarding, support, billing, or metrics)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: onboarding checklists, health scorecards, renewal playbooks, or billing SOPs
+
+## Examples
+
+- **User**: "Design a customer onboarding flow"
+  **Agent**: Runs Customer Onboarding workflow, produces 30-60-90 day plan with milestones, success criteria, and handoff points
+
+- **User**: "Set up a health score"
+  **Agent**: Runs Health Scoring workflow, defines leading indicators (product usage, support tickets, NPS), creates scoring model with risk thresholds
+
+- **User**: "Handle a billing dispute"
+  **Agent**: Runs Billing Operations workflow, investigates charge, applies refund policy, documents resolution, updates customer record
+
+## When to Use
+
+- Design or run customer onboarding, health scoring, and renewal playbooks
+- Triage support tickets, SLAs, escalations, and knowledge-base updates
+- Handle billing, dunning, refunds, and subscription change operations
+- Review CSAT, churn, NRR, and other customer-facing operational metrics
+
+## When NOT to Use
+
+- ASC 606 revenue recognition, deferred revenue, or audit-ready close → use `senior-revenue-accountant`
+- Data pipeline incidents or warehouse platform operations → use `data-system-ops-lead` or `data-manager`
+- Product requirements or process documentation for internal systems → use `business-analyst`
+- Public API or developer documentation → use `tech-writer-researcher`
+- Deal desk, order forms, signature routing, CRM close process → use `deal-operations-administrator`
+- Employee HR onboarding, offboarding, HRIS → use `people-operations-specialist`
+- Technical debugging, repro, engineering escalation → use `support-engineer`
+- Product how-to, configuration help, support macros → use `product-support-specialist`
 
 ## Core Workflows
 
@@ -44,8 +97,6 @@ description: |
 | NPS/CSAT | 15% | >50 | 30-50 | <30 |
 | Engagement | 15% | Responsive | Delayed | Ghosted |
 
-**See `references/customer_success.md` for onboarding playbooks, health scoring frameworks, and renewal/expansion strategies.**
-
 ### 2. Support & Issue Resolution
 
 **Ticket triage:**
@@ -66,8 +117,6 @@ description: |
 6. Document in knowledge base
 7. Close with CSAT survey
 
-**See `references/support_operations.md` for SLA frameworks, escalation paths, and knowledge base management.**
-
 ### 3. Revenue Operations
 
 **Billing workflow:**
@@ -76,8 +125,6 @@ description: |
 - Dunning (failed payment recovery)
 - Refund and credit processing
 - Subscription changes (upgrade/downgrade/cancel)
-
-**See `references/revenue_operations.md` for billing procedures, dunning strategies, and subscription management.**
 
 ### 4. Metrics & Continuous Improvement
 
@@ -94,12 +141,3 @@ description: |
 - NRR (Net Revenue Retention)
 - Health score distribution
 - Knowledge base article effectiveness
-
-**See `references/tools_metrics.md` for CRM/helpdesk setup, analytics dashboards, and operational KPIs.**
-
-## When to Load References
-
-- **Customer success** → `references/customer_success.md`
-- **Support operations** → `references/support_operations.md`
-- **Revenue operations** → `references/revenue_operations.md`
-- **Tools & metrics** → `references/tools_metrics.md`

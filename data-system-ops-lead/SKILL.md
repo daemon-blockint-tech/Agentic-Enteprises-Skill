@@ -1,14 +1,62 @@
 ---
 name: data-system-ops-lead
 description: |
-  Guides data system operation leads in managing data platform operations and leading ops teams.
-  Covers pipeline monitoring, SLA enforcement, incident response, capacity management, team scheduling,
-  on-call management, runbook development, vendor management, and operational process design.
-  Use when operating data platforms, managing data ops teams, responding to incidents, optimizing costs,
-  designing operational processes, or leading shift-based data infrastructure teams.
+  Run data system operations and reliability engineering.
+  Cover pipeline monitoring, incident response, SLA management, capacity planning,
+  on-call runbooks, data quality alerting, and operational excellence.
+  Triggers on "data pipeline monitoring", "incident response", "SLA management",
+  "capacity planning", "on-call runbook", "data quality alerting", "operational excellence",
+  "system reliability", "pipeline health check", or "data ops".
 ---
 
-# Data System Operation Lead
+# Data System Operations Lead
+
+## Overview
+
+Run data system operations and reliability engineering. This skill covers pipeline monitoring,
+incident response, SLA management, capacity planning, on-call runbooks, data quality alerting,
+and operational excellence.
+
+## Features
+
+- Pipeline monitoring with alerting thresholds and dashboard design
+- Incident response: severity classification, escalation paths, post-incident reviews
+- SLA management with performance tracking and breach prevention
+- Capacity planning: resource forecasting, scaling triggers, cost optimization
+- On-call runbooks with step-by-step troubleshooting procedures
+- Data quality alerting with anomaly detection and validation rules
+
+## Usage
+
+1. Identify the user's data ops need (monitoring, incident response, SLA, capacity, or runbooks)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: monitoring dashboards, incident reports, SLA scorecards, or runbooks
+
+## Examples
+
+- **User**: "Set up pipeline monitoring"
+  **Agent**: Runs Monitoring workflow, defines alert thresholds, creates dashboard with latency/throughput/error rate metrics
+
+- **User**: "Handle a pipeline failure"
+  **Agent**: Runs Incident Response workflow, classifies severity, executes runbook, produces post-incident report with root cause
+
+- **User**: "Create an on-call runbook"
+  **Agent**: Runs Runbook Creation workflow, documents troubleshooting steps, escalation paths, and verification checks
+
+## When to Use
+
+- Running daily data platform health checks, pipeline triage, and SLA enforcement
+- Leading incident response, post-incident reviews, and on-call/shift handoffs
+- Managing vendor escalations, cost reviews, and operational process design
+- Coaching ops engineers on runbooks, capacity, and alert hygiene
+
+## When NOT to Use
+
+- Strategic data mesh/lakehouse architecture or governance policy → use `data-architect`
+- Program roadmaps, quarterly planning, or governance committee operations → use `data-manager`
+- Writing dimensional models or MERGE-based incremental ETL → use `data-warehouse-engineer`
+- General cloud/Kubernetes infrastructure outside the data platform → use `infrastructure-engineer`
+- Org-wide on-call program, SEV definitions, postmortem tooling → use `incident-management-engineer`
 
 ## Core Workflows
 
@@ -32,8 +80,6 @@ description: |
 - [ ] Query performance within baseline
 - [ ] Backup jobs completed
 
-**See `references/platform_operations.md` for monitoring setup, SLA frameworks, and capacity planning.**
-
 ### 2. Incident & Problem Management
 
 **Incident severity matrix:**
@@ -54,8 +100,6 @@ description: |
 - Impact assessment
 - Action items with owners and dates
 - Process improvements
-
-**See `references/platform_operations.md` for runbook templates and escalation procedures.**
 
 ### 3. Team & Shift Leadership
 
@@ -87,8 +131,6 @@ description: |
 - Recurring alert on pipeline Y — may need threshold tuning
 ```
 
-**See `references/team_leadership.md` for scheduling, burnout prevention, and team development.**
-
 ### 4. Vendor & Cost Management
 
 **Monthly cost review:**
@@ -101,12 +143,3 @@ description: |
 1. Technical support (standard ticket)
 2. Account manager (business impact)
 3. Executive escalation (contract-level)
-
-**See `references/vendor_tools.md` for vendor evaluation, cost optimization, and tool selection.**
-
-## When to Load References
-
-- **Platform operations** → `references/platform_operations.md`
-- **Team leadership** → `references/team_leadership.md`
-- **Operational processes** → `references/operational_processes.md`
-- **Vendor & tools** → `references/vendor_tools.md`

@@ -1,14 +1,65 @@
 ---
 name: senior-revenue-accountant
 description: |
-  Guides senior revenue accountants in revenue recognition, month-end close, SaaS metrics, and audit support.
-  Covers ASC 606 / IFRS 15 (contract review, performance obligations, SSP allocation, modifications),
-  month-end close procedures, reconciliations, ARR/MRR reporting, board metrics, SOX controls, and audit preparation.
-  Use when analyzing revenue contracts, preparing journal entries, performing flux analysis, calculating SaaS metrics,
-  building board reports, or supporting internal/external audits.
+  Apply ASC 606/IFRS 15 to revenue recognition and contract analysis.
+  Cover performance obligations, deferred revenue, commission accounting,
+  revenue metrics (ARR, NRR, GRR), and audit preparation.
+  Triggers on "revenue recognition", "ASC 606 compliance", "contract analysis",
+  "deferred revenue schedule", "commission accounting", "revenue metrics",
+  "revenue audit", "IFRS 15", or "revenue accounting policy".
 ---
 
 # Senior Revenue Accountant
+
+## Overview
+
+Apply ASC 606/IFRS 15 to revenue recognition and contract analysis. This skill covers performance
+obligations, deferred revenue, commission accounting, revenue metrics (ARR, NRR, GRR), and
+audit preparation.
+
+## Features
+
+- ASC 606/IFRS 15 five-step revenue recognition model
+- Contract analysis: performance obligations, transaction price allocation, variable consideration
+- Deferred revenue scheduling: monthly amortization, contract modifications, renewals
+- Commission accounting: capitalization, amortization, impairment testing
+- Revenue metrics: ARR, NRR, GRR, churn, expansion calculation formulas
+- Audit preparation: revenue rollforwards, contract testing, documentation packages
+
+## Usage
+
+1. Identify the user's revenue accounting need (recognition, contracts, deferred revenue, metrics, or audit)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: revenue recognition memos, contract analyses, deferred revenue schedules, or audit packages
+
+## Examples
+
+- **User**: "Recognize revenue for a SaaS contract"
+  **Agent**: Runs ASC 606 workflow, identifies performance obligations, allocates transaction price, produces recognition schedule
+
+- **User**: "Calculate NRR"
+  **Agent**: Runs Revenue Metrics workflow, gathers starting ARR, expansion, contraction, churn data, calculates NRR with formula
+
+- **User**: "Prepare for revenue audit"
+  **Agent**: Runs Audit Preparation workflow, creates revenue rollforward, samples contracts for testing, assembles documentation package
+
+## When to Use
+
+- Applying ASC 606 / IFRS 15 to contracts, POBs, SSP allocation, and modifications
+- Running month-end revenue close, reconciliations, flux analysis, and journal entries
+- Calculating SaaS metrics (ARR, MRR, NRR, GRR, RPO) and board-ready revenue reporting
+- Preparing SOX controls, audit PBCs, and external auditor support
+
+## When NOT to Use
+
+- Customer support billing ops, dunning playbooks, or ticket SLAs → use `customer-ops-specialist`
+- BI dashboards or exploratory product analytics → use `bi-analyst`
+- Data pipeline reliability or warehouse incident management → use `data-system-ops-lead`
+- General business requirements or process maps for non-finance systems → use `business-analyst`
+- Commercial terms negotiation (liability, indemnity, DPA redlines) → use `commercial-counsel`
+- Order form processing, deal desk, CRM-to-billing handoff → use `deal-operations-administrator`
+- Business model canvas, market sizing, competitor pricing research → use `business-model-researcher`
+- Compute capex, cloud COGS GL mapping, chargeback → use `compute-accounting-manager`
 
 ## Core Workflows
 
@@ -42,8 +93,6 @@ description: |
    - Input/output methods for over-time
    - Progress toward completion
 
-**See `references/revenue_recognition.md` for contract review checklists, SSP methodologies, and modification accounting.**
-
 ### 2. Month-End Close Process
 
 **Close calendar (days 0-10):**
@@ -62,8 +111,6 @@ description: |
 | 9 | Board package | FP&A | Final numbers |
 | 10 | Distribution | CFO | Board package |
 
-**See `references/close_operations.md` for close checklists, reconciliations, and journal entry templates.**
-
 ### 3. SaaS Metrics & Reporting
 
 **Key SaaS revenue metrics:**
@@ -77,8 +124,6 @@ description: |
 | TCV | Total contract value (multi-year) | Booking size |
 | RPO | Remaining performance obligation | Future revenue |
 | Billings | Cash collected + AR change | Cash proxy |
-
-**See `references/reporting_metrics.md` for metric calculations, board reporting templates, and forecasting.**
 
 ### 4. Audit & Compliance Support
 
@@ -94,12 +139,3 @@ description: |
 - [ ] Journal entries supported
 - [ ] Flux explanations documented
 - [ ] Prior year adjustments addressed
-
-**See `references/compliance_audit.md` for SOX documentation, audit response templates, and control testing.**
-
-## When to Load References
-
-- **Revenue recognition** → `references/revenue_recognition.md`
-- **Close operations** → `references/close_operations.md`
-- **Reporting & metrics** → `references/reporting_metrics.md`
-- **Compliance & audit** → `references/compliance_audit.md`

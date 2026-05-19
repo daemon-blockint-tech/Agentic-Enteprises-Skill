@@ -1,15 +1,62 @@
 ---
 name: prompt-engineer
 description: |
-  Guides prompt engineering and AI agent orchestration for LLM applications.
-  Covers prompt design patterns (few-shot, chain-of-thought, role prompting, structured output),
-  prompt optimization (A/B testing, evaluation, versioning), agent workflows (ReAct, tool use, planning),
-  and production patterns (guardrails, observability, cost optimization).
-  Use when designing prompts, building LLM-powered applications, optimizing model outputs,
-  creating agentic systems, or deploying prompt-based features to production.
+  Design, test, and optimize prompts for LLM interactions.
+  Cover prompt patterns (few-shot, chain-of-thought, ReAct), system prompt design,
+  output formatting, prompt evaluation, and prompt optimization techniques.
+  Triggers on "write prompt", "optimize prompt", "design system prompt",
+  "few-shot examples", "chain of thought", "prompt evaluation",
+  "LLM output formatting", "prompt testing", or "prompt patterns".
 ---
 
 # Prompt Engineer
+
+## Overview
+
+Design, test, and optimize prompts for LLM interactions. This skill covers prompt patterns
+(few-shot, chain-of-thought, ReAct), system prompt design, output formatting, prompt evaluation,
+and prompt optimization techniques.
+
+## Features
+
+- Prompt patterns: few-shot, zero-shot, chain-of-thought, ReAct, self-consistency
+- System prompt design: role definition, constraints, output format specification
+- Output formatting: JSON, XML, markdown, structured templates
+- Prompt evaluation: quality metrics, consistency testing, edge case analysis
+- Prompt optimization: token reduction, clarity improvement, robustness testing
+
+## Usage
+
+1. Identify the user's prompt need (pattern selection, system prompt, output format, or optimization)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: prompt templates, system prompts, output schemas, or evaluation reports
+
+## Examples
+
+- **User**: "Write a prompt for summarization"
+  **Agent**: Runs Prompt Design workflow, selects zero-shot pattern, defines role and constraints, produces prompt with output format
+
+- **User**: "Optimize this prompt"
+  **Agent**: Runs Prompt Optimization workflow, identifies ambiguity, reduces token count, adds clarity, tests edge cases
+
+- **User**: "Evaluate prompt quality"
+  **Agent**: Runs Prompt Evaluation workflow, tests against quality metrics, identifies failure modes, produces improvement recommendations
+
+## When to Use
+
+- Designing, versioning, and evaluating prompts for LLM-powered features
+- Building agent workflows (ReAct, tool use, multi-agent coordination)
+- Optimizing accuracy, format compliance, latency, and token cost
+- Deploying guardrails, observability, and abuse defenses for GenAI in production
+
+## When NOT to Use
+
+- Classical ML model training, feature engineering, or statistical A/B tests → use `data-scientist`
+- General technical writing, API reference, or runbooks → use `tech-writer-researcher`
+- Cloud infrastructure, CI/CD, or Kubernetes operations → use `infrastructure-engineer`
+- Revenue recognition or finance close procedures → use `senior-revenue-accountant`
+- Multi-feature token reduction roadmap → use `ai-token-improvement-plan-engineer`
+- Rigorous token-efficiency experiments and ablations → use `research-engineer-scientist-tokens`
 
 ## Core Workflows
 
@@ -42,8 +89,6 @@ description: |
    - Boundary conditions
    - Multiple languages or formats
 
-**See `references/prompt_design.md` for patterns, templates, and examples.**
-
 ### 2. Prompt Optimization & Testing
 
 **Evaluation dimensions:**
@@ -59,8 +104,6 @@ description: |
 3. Modify one variable at a time (prompt, model, temperature)
 4. Run A/B comparison on benchmark
 5. Measure and document improvement
-
-**See `references/prompt_optimization.md` for evaluation frameworks, regression testing, and cost strategies.**
 
 ### 3. Agent Orchestration
 
@@ -79,8 +122,6 @@ description: |
 - [ ] Tool results are summarized, not passed raw to user
 - [ ] Rate limits and costs are monitored
 
-**See `references/agent_orchestration.md` for ReAct implementation, tool definitions, and multi-agent patterns.**
-
 ### 4. Production Patterns
 
 **Security checklist:**
@@ -95,12 +136,3 @@ description: |
 - Track token usage and cost per user/request
 - Monitor for drift in output quality
 - Alert on error rates and latency spikes
-
-**See `references/production_patterns.md` for guardrails, caching strategies, and deployment patterns.**
-
-## When to Load References
-
-- **Prompt design** → `references/prompt_design.md`
-- **Optimization & testing** → `references/prompt_optimization.md`
-- **Agent orchestration** → `references/agent_orchestration.md`
-- **Production patterns** → `references/production_patterns.md`

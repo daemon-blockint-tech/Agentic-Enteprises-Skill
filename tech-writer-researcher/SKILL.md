@@ -1,14 +1,65 @@
 ---
 name: tech-writer-researcher
 description: |
-  Guides technical writing, documentation, and research synthesis.
-  Covers API docs, user guides, runbooks, READMEs, style guides, information architecture,
-  literature reviews, competitive analysis, evidence synthesis, and content strategy.
-  Use when writing technical documentation, creating developer content, structuring information,
-  conducting research, synthesizing findings, or building documentation systems.
+  Write and research technical documentation.
+  Cover information architecture, style guides, API documentation, user research, content strategy,
+  and documentation operations.
+  Triggers on "write technical documentation", "create API docs", "developer tutorial",
+  "information architecture", "style guide", "content strategy", "documentation audit",
+  "user research", or "technical writing".
 ---
 
 # Technical Writer / Researcher
+
+## Overview
+
+Write and research technical documentation. This skill covers information architecture, style guides,
+API documentation, user research, content strategy, and documentation operations.
+
+## Features
+
+- Information architecture: content modeling, navigation design, taxonomy creation
+- Style guides: voice and tone, terminology, code examples, accessibility standards
+- API documentation: endpoint reference, request/response examples, authentication guides
+- User research: persona development, usability testing, content gap analysis
+- Content strategy: editorial calendars, content audits, migration planning
+- Documentation operations: version control, review workflows, localization, metrics
+
+## Usage
+
+1. Identify the user's technical writing need (architecture, style, API docs, research, or strategy)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: content models, style guides, API reference docs, research reports, or content strategies
+
+## Examples
+
+- **User**: "Write API documentation"
+  **Agent**: Runs API Documentation workflow, creates endpoint reference with request/response examples, authentication guide, and error codes
+
+- **User**: "Create a style guide"
+  **Agent**: Runs Style Guide workflow, defines voice and tone, establishes terminology, produces code example standards
+
+- **User**: "Audit our documentation"
+  **Agent**: Runs Content Strategy workflow, analyzes content gaps, identifies outdated pages, produces improvement roadmap
+
+## When to Use
+
+- Authoring API references, tutorials, runbooks, READMEs, and release notes
+- Planning documentation information architecture and content lifecycle
+- Conducting structured research, literature reviews, and evidence synthesis
+- Editing for clarity, consistency, accessibility, and style-guide compliance
+
+## When NOT to Use
+
+- Prompt/LLM agent design, eval harnesses, or guardrails → use `prompt-engineer`
+- Business requirements, BRDs, or process modeling for delivery projects → use `business-analyst`
+- Warehouse SQL optimization or dimensional modeling → use `data-warehouse-engineer`
+- Revenue accounting, close calendars, or ASC 606 judgments → use `senior-revenue-accountant`
+- Customer ticket repro, escalation, support KB fixes → use `support-engineer`
+- Product support how-tos, macros, ticket triage → use `product-support-specialist`
+- Strategy consulting, executive recommendations, operating model → use `business-consultant`
+- Business model and competitive monetization research → use `business-model-researcher`
+- All-hands, crisis statements, launch messaging → use `communication-lead`
 
 ## Core Workflows
 
@@ -59,8 +110,6 @@ description: |
 | Release notes | What changed, why | Users, stakeholders | Short |
 | FAQ | Common questions | Support reduction | Varies |
 
-**See `references/technical_writing.md` for templates, style guidance, and doc system architecture.**
-
 ### 2. Research & Synthesis Workflow
 
 **Structured research process:**
@@ -89,8 +138,6 @@ description: |
    - Cite sources properly
    - Include confidence levels and limitations
 
-**See `references/research_methods.md` for frameworks, synthesis techniques, and citation standards.**
-
 ### 3. Content Strategy & Planning
 
 **Content inventory template:**
@@ -98,8 +145,6 @@ description: |
 | Document | Audience | Type | Owner | Last Updated | Review Cycle | Status |
 |---|---|---|---|---|---|---|
 | API Guide | Developers | Reference | @tech-writer | 2024-01 | Quarterly | Current |
-
-**See `references/content_strategy.md` for planning frameworks, lifecycle management, and content metrics.**
 
 ### 4. Editing & Review
 
@@ -111,12 +156,3 @@ description: |
 - [ ] Scannable headings and lists
 - [ ] Working links and code examples
 - [ ] Accessibility (alt text, color independence)
-
-**See `references/technical_writing.md` for review rubrics and style guide frameworks.**
-
-## When to Load References
-
-- **Technical writing** → `references/technical_writing.md`
-- **Research methods** → `references/research_methods.md`
-- **Content strategy** → `references/content_strategy.md`
-- **Tools & frameworks** → `references/tools_frameworks.md`

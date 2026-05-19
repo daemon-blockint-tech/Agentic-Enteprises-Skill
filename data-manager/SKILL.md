@@ -1,14 +1,61 @@
 ---
 name: data-manager
 description: |
-  Guides data management across program/product management, governance operations, and data operations/reliability.
-  Covers data roadmaps, stakeholder coordination, metadata stewardship, lifecycle management, monitoring,
+  Manage data programs, governance operations, and data reliability.
+  Cover data roadmaps, stakeholder coordination, metadata stewardship, lifecycle management, monitoring,
   incident response, capacity planning, and SLA frameworks.
-  Use when managing data teams, defining data product roadmaps, running governance programs,
-  handling data incidents, or establishing operational cadences for data infrastructure.
+  Triggers on "manage data team", "data roadmap", "governance review", "data incident",
+  "SLA framework", "data ops", "stewardship", "data product delivery", or "data KPIs".
+  Human annotation/labeling platform PM: product-management-human-data-platform.
 ---
 
 # Data Manager
+
+## Overview
+
+Manage data programs, governance operations, and data reliability. This skill covers data roadmaps,
+stakeholder coordination, metadata stewardship, lifecycle management, monitoring, incident response,
+capacity planning, and SLA frameworks.
+
+## Features
+
+- Data roadmap planning with stakeholder alignment and delivery cadence
+- Governance operations: stewardship, access reviews, lifecycle enforcement
+- Data ops monitoring with incident response and escalation paths
+- Team KPI/SLA scorecards and operational metrics
+- Cross-functional coordination across engineers, analysts, scientists, and legal
+
+## Usage
+
+1. Identify the user's data management need (roadmap, governance, ops, or coordination)
+2. Follow the corresponding workflow below
+3. Produce structured outputs: roadmaps, governance policies, incident reports, or KPI dashboards
+
+## Examples
+
+- **User**: "Create a data team roadmap"
+  **Agent**: Runs Program Management workflow, produces quarterly roadmap with initiatives, dependencies, and stakeholder sign-offs
+
+- **User**: "Set up data governance"
+  **Agent**: Runs Governance Operations workflow, defines stewardship roles, access review cadence, and lifecycle policies
+
+- **User**: "Handle a data incident"
+  **Agent**: Runs Data Ops workflow, triages severity, executes runbook, produces post-incident report with action items
+
+## When to Use
+
+- Own the data roadmap, stakeholder reviews, and data product delivery cadence
+- Run governance operations (stewardship, access reviews, lifecycle enforcement)
+- Establish data ops monitoring, incident response, and team KPI/SLA scorecards
+- Coordinate engineers, analysts, scientists, and legal on cross-functional data work
+
+## When NOT to Use
+
+- Deep platform architecture ADRs or ontology design → use `data-architect` or `ontology-engineer`
+- Hands-on warehouse SQL optimization or SCD modeling → use `data-warehouse-engineer`
+- ML experimentation, model evaluation, or MLOps deployment → use `data-scientist`
+- Cloud VPC, Kubernetes, or IaC provisioning → use `infrastructure-engineer`
+- Company-wide multi-team technical programs (non-data) → use `technical-program-manager`
 
 ## Core Workflows
 
@@ -37,8 +84,6 @@ description: |
 6. Document and train consumers
 7. Monitor usage and iterate
 
-**See `references/program_management.md` for roadmap templates, stakeholder matrices, and prioritization frameworks.**
-
 ### 2. Governance Operations Execution
 
 **Core activities:**
@@ -55,8 +100,6 @@ description: |
 - Data incident → On-call engineer → Team lead → Director
 - Quality breach → Data steward → Governance committee → CDO
 - Access violation → Security team → Legal (if PII exposure)
-
-**See `references/governance_operations.md` for stewardship models, access review templates, and lifecycle policies.**
 
 ### 3. Data Operations & Reliability
 
@@ -76,8 +119,6 @@ description: |
 3. **Mitigate**: Stop bleeding (rollback, redirect traffic)
 4. **Resolve**: Root cause fix deployed
 5. **Review**: Post-mortem within 48 hours for P1-P2
-
-**See `references/data_operations.md` for runbooks, backup strategies, and capacity planning.**
 
 ### 4. Metrics & SLA Framework
 
@@ -99,12 +140,3 @@ description: |
 | Tier 1 | Business-critical dashboards | 1 hour | 0 | Revenue reporting |
 | Tier 2 | Operational analytics | 4 hours | 4 hours | Marketing attribution |
 | Tier 3 | Research/exploratory | 24 hours | 24 hours | Ad-hoc analysis |
-
-**See `references/metrics_framework.md` for SLA templates, scorecard examples, and team productivity metrics.**
-
-## When to Load References
-
-- **Program management** → `references/program_management.md`
-- **Governance operations** → `references/governance_operations.md`
-- **Data operations** → `references/data_operations.md`
-- **Metrics & SLAs** → `references/metrics_framework.md`
