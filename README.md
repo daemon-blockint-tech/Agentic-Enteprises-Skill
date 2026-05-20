@@ -1,23 +1,21 @@
 # Agentic Enterprise OS
 
-**198-skill operating system for AI-native enterprises**
-
-Repository: [github.com/daemon-blockint-tech/Agentic-Enteprises-Skill](https://github.com/daemon-blockint-tech/Agentic-Enteprises-Skill)
+**~200-Skill Operating System for AI-Native Enterprises**
 
 ---
 
 ## Overview
 
-Agentic Enterprise OS is not a collection of prompts — it is a **modular, layered operating system** for AI-native enterprises. It provides:
+Agentic Enterprise OS is not a collection of prompts — it's a **modular, layered operating system** for AI-native enterprises. It provides:
 
-- **198 specialized skills** (each in `<skill-name>/SKILL.md` with reference playbooks)
-- **5 workflow chains** for end-to-end operations (YAML under `.workflows/`)
+- **~198 specialized skills** (one `SKILL.md` per domain folder) across the original 7-layer model plus major expansions
+- **5 workflow chains** for end-to-end operations (YAML templates in `.workflows/`)
 - **4 execution modes** for different task complexities
 - **Cross-cutting validation** via `build-validator`
 - **Persistent memory** via `ai-memory-developer`
-- **Dynamic routing** via `ai-skill-manager` and `ai-lead-ops`
+- **Dynamic routing** via `ai-skill-manager`
 
-Use [`.docs/SKILL_REGISTRY.md`](.docs/SKILL_REGISTRY.md) and [`.docs/ORCHESTRATION_ROUTING.md`](.docs/ORCHESTRATION_ROUTING.md) as the canonical routing index. The registry documents core layers in depth; additional domain packs (cloud, actuarial, expanded security, supply chain, and others) are registered at the folder level.
+Recent expansions add depth in **actuarial and insurance**, **cloud and FinOps**, **SRE and resilience**, **predictive analytics**, **ML safeguards and agentic AI**, **AML and financial crime**, **supply chain**, **OT/ICS and networking**, and a **broader security portfolio** (CTI, pentest, formal methods, vendor risk, executive security roles).
 
 ---
 
@@ -58,18 +56,33 @@ Execute concurrently → Merge results → Return
 ```
 User: "Launch a new AI-powered product from scratch"
     ↓
-Orchestrator: ai-lead-ops dynamically routes through 9+ skills
+Orchestrator: ai-lead-ops dynamically routes through many skills
     ↓
 Execute with dynamic routing → Return
 ```
 
 ---
 
+## Using Skills
+
+Each skill lives in `<skill-name>/SKILL.md` with YAML frontmatter (`name`, `description` triggers) and optional `references/` depth material.
+
+| Goal | What to do |
+|------|------------|
+| **Find a skill** | Search this repo by keyword, or open [`.docs/SKILL_REGISTRY.md`](.docs/SKILL_REGISTRY.md) for the indexed catalog |
+| **Route work** | Match user intent to a skill's `description` triggers; use `ai-skill-manager` for overlap, gaps, and portfolio hygiene |
+| **Run a workflow** | Pick a template under [`.workflows/`](.workflows/) (data pipeline, security ops, revenue ops, AI product dev, infra deployment) |
+| **Add a skill** | Create `<skill-name>/SKILL.md`, then update registry and architecture docs (see Contributing) |
+
+**Agent clients (Cursor, Claude Code, etc.):** point the client at this repository (or copy skill folders into your skills path). Skills are discovered from installed `SKILL.md` files; no separate runtime is required beyond your agent host.
+
+---
+
 ## Architecture
 
-### Layered model
+### 7 Layers (conceptual model)
 
-Skills are organized in layers (governance at the top, physical infrastructure at the base). The original seven-layer model still applies; many new skills extend **Layer 2 (infrastructure & security)**, **Layer 3 (data & analytics)**, **Layer 4 (AI/ML)**, and **Layer 0 (business & operations)**.
+The OS still organizes work into seven layers. Skill count per layer has grown well beyond the original 86-skill baseline; treat layers as **routing planes**, not fixed headcount.
 
 ```
 Layer 5: GOVERNANCE & ORCHESTRATION
@@ -78,16 +91,14 @@ Layer 4: AI & ML OPERATIONS
     ↑
 Layer 3: DATA & ANALYTICS
     ↑
-Layer 2: INFRASTRUCTURE & SECURITY (incl. cloud, SRE, D3FEND, expanded AppSec)
+Layer 2: INFRASTRUCTURE & SECURITY
     ↑
 Layer 1: SOFTWARE ENGINEERING
     ↑
-Layer 0: BUSINESS & OPERATIONS (incl. actuarial, insurance, supply chain, talent)
+Layer 0: BUSINESS & OPERATIONS
     ↑
 Layer -1: PHYSICAL INFRASTRUCTURE
 ```
-
-See [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md) for dependency diagrams.
 
 ### 5 Workflow Chains
 
@@ -111,9 +122,11 @@ See [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md) for dependency 
 | Document | Description |
 |----------|-------------|
 | [HIGH_LEVEL_DESIGN.md](.docs/HIGH_LEVEL_DESIGN.md) | High-level architecture and system design |
-| [ARCHITECTURE_GRAPH.md](.docs/ARCHITECTURE_GRAPH.md) | Mermaid graphs of skills and dependencies |
+| [ARCHITECTURE_GRAPH.md](.docs/ARCHITECTURE_GRAPH.md) | Mermaid graph of skills and dependencies |
 | [ORCHESTRATION_ROUTING.md](.docs/ORCHESTRATION_ROUTING.md) | Routing logic, execution modes, state management, error handling |
-| [SKILL_REGISTRY.md](.docs/SKILL_REGISTRY.md) | Skill registry with triggers, inputs, outputs (core catalog; extend with folder scan) |
+| [SKILL_REGISTRY.md](.docs/SKILL_REGISTRY.md) | Skill catalog with triggers, inputs, outputs |
+
+> **Note:** `.docs/` files were authored against the original **86-skill** baseline. The repo now ships **~198** skills; use each skill's `SKILL.md` as source of truth until registry and graph docs are refreshed.
 
 ## Workflow Templates
 
@@ -127,28 +140,35 @@ See [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md) for dependency 
 
 ---
 
-## Skill Domains (198 packages)
+## Skill Categories
 
-Skills live in top-level folders named `<skill-name>/` with `SKILL.md` and `references/`. Major domain packs include:
+### Core layers (original portfolio)
 
-| Domain | Examples |
-|--------|----------|
-| **Governance & orchestration** | `build-validator`, `ai-risk-governance`, `ai-skill-manager`, `technical-program-manager` |
-| **AI & ML** | `ai-researcher`, `ai-engineer`, `ai-lead-ops`, `ml-*-safeguards`, `agentic-ai-developer`, `multi-agent-system-engineer` |
-| **Data & analytics** | `data-architect`, `data-scientist`, `predictive-analytics`, `data-visualization`, `bi-analyst` |
-| **Cloud & platform** | `cloud-architect`, `cloud-engineer`, `enterprise-cloud-architect`, `finops-analyst`, `site-reliability-engineer`, `vp-of-infrastructure` |
-| **Infrastructure & DevOps** | `infrastructure-engineer`, `platform-engineer`, `devops`, `devsecops`, `ci-cd-engineer` |
-| **Security** | `cybersecurity`, D3FEND skills, `penetration-tester`, `threat-hunter`, `soc-analyst`, `enterprise-security-architect` |
-| **Actuarial & insurance** | `pre-actuarial-foundations`, `actuarial-analyst`, `associate-actuary`, `appointed-chief-actuary`, `property-casualty-insurance`, `validation-by-educational-experience` |
-| **Business & operations** | `business-consultant`, `commercial-counsel`, `supply-chain-manager`, `talent-acquisition`, `enterprise-strategist` |
-| **Software engineering** | `senior-system-architecture`, `senior-software-engineer`, `performance-engineer`, `solutions-architect` |
-| **Physical infrastructure** | Data-center portfolio, capacity, and field-services skills |
+| Layer | Representative skills |
+|-------|------------------------|
+| **Governance & orchestration** | `build-validator`, `ai-risk-governance`, `ai-skill-manager`, `technical-program-manager`, `engineering-manager-*` |
+| **AI & ML operations** | `ai-researcher`, `ai-engineer`, `ai-lead-ops`, `ai-redteam`, `prompt-engineer`, `ml-*-safeguards`, `ml-systems-engineer-rl-engineering` |
+| **Data & analytics** | `data-architect`, `data-warehouse-engineer`, `analytics-data-engineer`, `data-scientist`, `bi-analyst`, `ontology-engineer` |
+| **Infrastructure & security** | `infrastructure-engineer`, `platform-engineer`, `devops`, `devsecops`, `cybersecurity`, `offensive-security-analyst`, `defensive-security-analyst`, D3FEND (`d3fend-*`) |
+| **Software engineering** | `senior-system-architecture`, `senior-fullstack-developer`, `ui-software-engineer`, `ux-software-engineer`, `support-engineer` |
+| **Business & operations** | `business-consultant`, `commercial-counsel`, `deal-operations-administrator`, `product-management-monetization`, `customer-ops-specialist` |
+| **Physical infrastructure** | `data-center-*`, `field-services-engineer`, `director-infrastructure-capex-accounting` |
 
-To list all skills locally:
+### Expanded domains (examples)
 
-```bash
-find . -maxdepth 2 -name 'SKILL.md' | sed 's|/SKILL.md||' | sed 's|^\./||' | sort
-```
+| Domain | Example skills |
+|--------|----------------|
+| **Actuarial & insurance** | `actuary`, `actuarial-analyst`, `actuarial-consulting`, `appointed-chief-actuary`, `associate-actuary`, `asset-liability-management`, `assumption-setting`, `advanced-*-actuarial-mathematics`, `property-casualty-insurance`, `life-health-insurance`, `pension-retirement-funds`, `ifrs`, `ab-testing-engineer` |
+| **AML & financial crime** | `aml-cft`, `aml-compliance`, `financial-intelligence-unit`, `str-report`, `anti-false-positive-decision-making` |
+| **Cloud, FinOps & platform** | `cloud-architect`, `cloud-engineer`, `cloud-security-engineer`, `cloud-economist`, `cloud-compliance-specialist`, `enterprise-cloud-architect`, `finops-analyst`, `vp-of-cloud`, `vp-of-infrastructure` |
+| **SRE & resilience** | `site-reliability-engineer`, `sla-slo-engineer`, `bcm-disaster-recovery-specialist` |
+| **Predictive & quantitative analytics** | `predictive-analytics`, `predictive-logistics-developer`, `quantitative-researcher`, `sentiment-analysis-engineer`, `sentiment-forecasting-engineer`, `operations-research-algorithm-developer` |
+| **ML safeguards & agentic AI** | `ml-research-engineer-safeguards`, `ml-infrastructure-engineer-safeguards`, `privacy-research-engineer-safeguards`, `ai-adversarial-robustness-engineer`, `agentic-ai-developer`, `multi-agent-system-engineer` |
+| **Security (expanded)** | `advanced-persistent-threat`, `cti-analyst`, `penetration-tester`, `red-team-specialist`, `web-pentester`, `network-pentester`, `cyber-resilience-engineer`, `enterprise-security-architect`, `vendor-cyber-risk-analyst`, `scada-ics-cyber-security-specialist`, `yara-rule-authoring`, `cryptographer-specialist`, `reverse-engineer`, `software-assurance-formal-methods-specialist`, `chief-information-security-officer`, `certified-information-systems-security-professional` |
+| **Supply chain, IoT & edge** | `supply-chain-manager`, `iot-network-edge-engineer`, `robotics-automation-integration-engineer`, `wms-developer`, `geospatial-telematics-developer` |
+| **Networking** | `cisco-certified-network-professional`, `sd-wan-engineer`, `network-backbone-architect`, `wireless-wifi-mobility-specialist` |
+
+For the full list, run `find . -maxdepth 2 -name SKILL.md` or browse [`.docs/SKILL_REGISTRY.md`](.docs/SKILL_REGISTRY.md).
 
 ---
 
@@ -165,7 +185,7 @@ find . -maxdepth 2 -name 'SKILL.md' | sed 's|/SKILL.md||' | sed 's|^\./||' | sor
 
 ## Quality Gates
 
-Every skill output can pass through `build-validator`:
+Every skill output passes through `build-validator`:
 
 - **Architecture**: System design is sound
 - **Security**: No vulnerabilities
@@ -179,7 +199,6 @@ Every skill output can pass through `build-validator`:
 ## Usage Examples
 
 ### Data Pipeline
-
 ```
 User: "Build end-to-end analytics pipeline"
     ↓
@@ -191,7 +210,6 @@ Return: Complete analytics pipeline with dashboard
 ```
 
 ### Security Audit
-
 ```
 User: "Full security audit with D3FEND response"
     ↓
@@ -203,7 +221,6 @@ Return: Complete security audit with defense plan
 ```
 
 ### AI Product Development
-
 ```
 User: "Build AI-powered product from scratch"
     ↓
@@ -218,10 +235,10 @@ Return: Complete AI product with security and compliance
 
 ## Contributing
 
-1. Create skill in `<skill-name>/SKILL.md` (use `name` and `description` frontmatter only).
-2. Add six `references/*.md` playbooks where applicable.
-3. Update [`.docs/SKILL_REGISTRY.md`](.docs/SKILL_REGISTRY.md) and [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md).
-4. Run `build-validator` (or project validation scripts) before merge.
+1. Create skill in `<skill-name>/SKILL.md` (YAML frontmatter + triggers in `description`)
+2. Add references under `references/` as needed
+3. Update [`.docs/SKILL_REGISTRY.md`](.docs/SKILL_REGISTRY.md) and [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md)
+4. Run `build-validator` (or portfolio checks via `ai-skill-manager`) to validate routing and overlap
 
 ---
 
