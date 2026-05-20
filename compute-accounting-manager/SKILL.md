@@ -26,6 +26,9 @@ description: |
 - **Reconcile** subledgers (cloud, asset, prepaid) to GL and explain flux
 - Support **audit** PBCs for compute-related balances and capitalization memos
 
+Operational cloud optimization, CUR analytics, and RI recommendations → `finops-analyst`.
+Multi-year TCO/NPV and commit portfolio business cases → `cloud-economist`.
+
 ## When NOT to Use
 
 - SaaS revenue recognition, deferred revenue, ARR → `senior-revenue-accountant`
@@ -39,6 +42,8 @@ description: |
 
 | Need | Skill |
 |---|---|
+| Cloud spend optimization and FinOps dashboards | `finops-analyst` |
+| Cloud TCO, NPV, and commit economics | `cloud-economist` |
 | Revenue and ASC 606 | `senior-revenue-accountant` |
 | DC utilization and supply planning | `data-center-compute-supply-efficiency` |
 | Capacity delivery and rack-ready | `senior-data-center-capacity-delivery-manager` |
@@ -48,6 +53,7 @@ description: |
 | SOX control evidence | `compliance-engineer` |
 | Business requirements for finance systems | `business-analyst` |
 | Capex policy, WIP/CIP, audit steering | `director-infrastructure-capex-accounting` |
+| Hardware procurement and supplier SCM | `supply-chain-manager` |
 
 ## Core Workflows
 

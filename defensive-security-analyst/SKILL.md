@@ -24,6 +24,7 @@ description: |
 
 ## When NOT to Use
 
+- Run alert queues, SOAR playbooks, or shift handoffs as primary work → `soc-analyst`
 - Define enterprise security strategy, policy, or GRC roadmap → `cybersecurity`
 - Execute penetration tests or exploit validation → `offensive-security-analyst`
 - Add CI/CD, SBOM, or supply-chain security gates → `devsecops`
@@ -34,6 +35,7 @@ description: |
 
 | Need | Skill |
 |---|---|
+| SOC queue triage, playbooks, shift turnover | `soc-analyst` |
 | Security program, GRC, architecture | `cybersecurity` |
 | Pipeline and IaC security | `devsecops` |
 | Rollout during active incident | `deployment-strategist` |

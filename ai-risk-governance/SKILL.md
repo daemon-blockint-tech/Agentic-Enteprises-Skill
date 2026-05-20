@@ -11,6 +11,7 @@ description: |
   or general SOC 2 IT controls without AI scope (cybersecurity). For AI solution architecture in
   commercial or enterprise deployments, use applied-ai-architect-commercial-enterprise. For agent
   skills catalog standards and security review before publish, use ai-skill-manager.
+  Safeguard infra/research: ml-infrastructure-engineer-safeguards, ml-research-engineer-safeguards.
 ---
 
 # AI Risk & Governance
@@ -47,6 +48,11 @@ description: |
 | SOC 2/ISO evidence and technical controls | `compliance-engineer` |
 | AI solution architecture (commercial/enterprise) | `applied-ai-architect-commercial-enterprise` |
 | Agent skills governance | `ai-skill-manager` |
+| Safeguard gateways, classifiers, rollout | `ml-infrastructure-engineer-safeguards` |
+| Safety classifier research and benchmarks | `ml-research-engineer-safeguards` |
+| Privacy research for safeguards | `privacy-research-engineer-safeguards` |
+| Enterprise security risk registers (non-AI scope) | `security-risk-analyst` |
+| M&A/investment cyber diligence and board packs | `cyber-diligence-governance` |
 
 ## Core Workflows
 

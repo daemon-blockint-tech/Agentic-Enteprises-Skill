@@ -8,7 +8,8 @@ description: |
   deciding bug vs education vs config issue, or documenting feedback—not for deep log/API debugging
   and engineering repro (support-engineer), billing/dunning programs (customer-ops-specialist),
   exec/VIP escalation programs (community-executive-escalations-program-manager), or public API
-  reference authoring (tech-writer-researcher).
+  reference authoring (tech-writer-researcher), or structured developer training programs
+  (developer-education-lead).
 ---
 
 # Product Support Specialist
@@ -43,6 +44,7 @@ description: |
 | UX/spec gaps in product | `product-designer` |
 | Monetization and plan fences | `product-management-monetization` |
 | Long-form docs | `tech-writer-researcher` |
+| Developer onboarding curriculum | `developer-education-lead` |
 
 ## Core Workflows
 

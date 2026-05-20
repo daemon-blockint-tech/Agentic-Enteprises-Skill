@@ -6,8 +6,8 @@ description: |
   networking, observability, and security hardening.
   Triggers on "design cloud infrastructure", "set up Terraform", "configure Kubernetes",
   "build CI/CD pipeline", "infrastructure monitoring", "network architecture",
-  "security hardening", "infrastructure cost optimization", or "platform engineering". For day-2
-  Kubernetes cluster operations—Helm rollouts, add-ons, RBAC, GitOps sync, workload troubleshooting,
+  "security hardening", "infrastructure cost optimization", or "platform engineering". For day-2 Kubernetes cluster
+  operations—Helm rollouts, add-ons, RBAC, GitOps sync, workload troubleshooting,
   use cluster-deployment-engineer. For data center facility design, power/cooling, rack layout,
   and build commissioning, use data-center-design-execution-lead. For on-prem compute utilization,
   GPU/CPU supply planning, stranded kW, and hardware refresh efficiency, use
@@ -58,6 +58,8 @@ container orchestration (Kubernetes), networking, observability, and security ha
 
 For security-control ownership (IdP, KMS, SIEM integration, PAM, guardrails as primary deliverable), prefer `information-security-engineer`.
 
+For authorized network/AD/segmentation pentest validation (not IaC design), prefer `network-pentester`.
+
 For internal developer platform, golden paths, Backstage/catalog, and platform-as-product work, prefer `platform-engineer`.
 
 ## When NOT to Use
@@ -67,9 +69,14 @@ For internal developer platform, golden paths, Backstage/catalog, and platform-a
 - LLM prompt/agent design or production guardrails → use `prompt-engineer`
 - Technical documentation or research synthesis deliverables → use `tech-writer-researcher`
 - Cross-service solution architecture before build → use `senior-system-architecture`
+- Cloud reference architecture, landing zone, migration design → use `cloud-architect`
+- Day-to-day managed cloud services (networking, RDS, serverless, cloud IAM) → use `cloud-engineer`
 - K8s cluster workload deploy, upgrades, and in-cluster troubleshooting → use `cluster-deployment-engineer`
 - Data center design, MEP, colo build, and facility commissioning → use `data-center-design-execution-lead`
 - Physical compute utilization, supply forecast, consolidation, refresh → use `data-center-compute-supply-efficiency`
+- Infrastructure org strategy, portfolio prioritization, board/CFO narratives → use `vp-of-infrastructure`
+- Cloud program strategy, migration portfolio, CCoE, EA governance → use `vp-of-cloud`
+- Customer RFP, discovery, PoC charter, solution handoff (not production build) → use `solutions-architect`
 
 ## Core Workflows
 

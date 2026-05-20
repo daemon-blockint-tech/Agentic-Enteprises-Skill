@@ -7,8 +7,9 @@ description: |
   Use when designing multi-service systems, evaluating platform or vendor choices, writing or
   reviewing architecture decision records, defining standards and principles, or assessing
   technical risk across domains—not for single-service RFCs and module design
-  (senior-software-engineer), data platform or mesh decisions (data-architect), cloud/IaC
-  implementation (infrastructure-engineer), internal developer platform product (platform-engineer),
+  (senior-software-engineer), data platform or mesh decisions (data-architect), cloud landing zone,
+  Well-Architected, and migration architecture (cloud-architect), cloud/IaC implementation
+  (infrastructure-engineer, cloud-engineer), internal developer platform product (platform-engineer),
   or program tracking (technical-program-manager). For business strategy and cases, use
   business-consultant; for applied AI (RAG, agents, copilots), use applied-ai-architect-commercial-enterprise.
 ---
@@ -36,6 +37,7 @@ description: |
 - LLM/RAG system design → `ai-engineer`
 - Business strategy, issue trees, steerCo cases → `business-consultant`
 - Applied AI / LLM solution architecture → `applied-ai-architect-commercial-enterprise`
+- Customer-facing solution design, RFP/RFI, PoC scope, deal integration → `solutions-architect`
 
 ## Related skills
 
@@ -43,7 +45,9 @@ description: |
 |---|---|
 | Service-level RFC and code review | `senior-software-engineer` |
 | Data domain and governance architecture | `data-architect` |
-| Cloud/network/IaC delivery | `infrastructure-engineer` |
+| Cloud solution and migration architecture | `cloud-architect` |
+| Enterprise cloud governance and landing zones | `enterprise-cloud-architect` |
+| Cloud/network/IaC delivery | `infrastructure-engineer`, `cloud-engineer` |
 | Platform-as-product and golden paths | `platform-engineer` |
 | Multi-team launch coordination | `technical-program-manager` |
 | Rollout and rollback planning | `deployment-strategist` |
@@ -52,6 +56,7 @@ description: |
 | Strategy, business case, operating model | `business-consultant` |
 | AI/LLM solution patterns | `ai-engineer` |
 | Commercial/enterprise applied AI architecture | `applied-ai-architect-commercial-enterprise` |
+| Customer deal solution, RFP, PoC handoff | `solutions-architect` |
 
 ## Core Workflows
 

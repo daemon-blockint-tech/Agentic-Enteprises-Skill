@@ -7,7 +7,8 @@ description: |
   writing research memos, critiquing methodology, or planning novel experiments—not for shipping
   production LLM features (ai-engineer), enterprise AI policy (ai-risk-governance), or adversarial
   product testing (ai-redteam). Token efficiency experiments and tokens-to-success benchmarks:
-  research-engineer-scientist-tokens.
+  research-engineer-scientist-tokens. Safety classifier and harm-benchmark research:
+  ml-research-engineer-safeguards. RL training systems engineering: ml-systems-engineer-rl-engineering.
 ---
 
 # AI Researcher
@@ -39,6 +40,8 @@ description: |
 | Governance, regulation, risk registers | `ai-risk-governance` |
 | Red-team attacks on deployed systems | `ai-redteam` |
 | Token/context efficiency research | `research-engineer-scientist-tokens` |
+| Safeguard ML benchmarks and classifiers | `ml-research-engineer-safeguards` |
+| RL distributed training infrastructure | `ml-systems-engineer-rl-engineering` |
 
 ## Core Workflows
 

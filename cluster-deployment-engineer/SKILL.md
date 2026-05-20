@@ -11,7 +11,8 @@ description: |
   rollout strategy canary/blue-green (deployment-strategist), IDP golden paths (platform-engineer),
   or admission policy program design (devsecops). DC facility design: data-center-design-execution-lead.
   DC compute supply/efficiency: data-center-compute-supply-efficiency. Rack-ready delivery:
-  senior-data-center-capacity-delivery-manager.
+  senior-data-center-capacity-delivery-manager. RL training jobs on cluster:
+  ml-systems-engineer-rl-engineering.
 ---
 
 # Cluster Deployment Engineer
@@ -43,6 +44,7 @@ description: |
 | Need | Skill |
 |---|---|
 | Cloud networking and cluster IaC | `infrastructure-engineer` |
+| VPC, IAM, load balancers for clusters | `cloud-engineer` |
 | CI/CD, GitOps pipelines, delivery SLOs | `devops` |
 | Release rollout and rollback planning | `deployment-strategist` |
 | Multi-tenant platform product | `platform-engineer` |
@@ -51,6 +53,7 @@ description: |
 | Launch comms for cluster changes | `communication-lead` |
 | Data center / colo facility design | `data-center-design-execution-lead` |
 | Compute supply and DC resource efficiency | `data-center-compute-supply-efficiency` |
+| RL distributed training workloads | `ml-systems-engineer-rl-engineering` |
 | Capacity delivery and rack-ready gates | `senior-data-center-capacity-delivery-manager` |
 | On-site rack-and-stack, cabling, sign-off | `field-services-engineer` |
 

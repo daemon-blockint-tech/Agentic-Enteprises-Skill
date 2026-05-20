@@ -6,7 +6,8 @@ description: |
   feature engineering, model evaluation, and MLOps patterns.
   Triggers on "build predictive model", "design A/B test", "feature engineering",
   "model evaluation", "causal inference", "productionize ML", "choose ML algorithm",
-  "statistical analysis", "model monitoring", or "data science workflow".
+  "statistical analysis", "model monitoring", or "data science workflow". Distributed RL
+  training systems: ml-systems-engineer-rl-engineering.
 ---
 
 # Data Scientist
@@ -55,6 +56,7 @@ and MLOps patterns.
 - Executive dashboards, KPI definitions, or BI storytelling → use `bi-analyst`
 - Warehouse dimensional modeling or ETL idempotency patterns → use `data-warehouse-engineer`
 - Prompt design, LLM agents, or guardrailed GenAI features → use `prompt-engineer`
+- RL training platform, rollout workers, distributed PPO/SAC jobs → use `ml-systems-engineer-rl-engineering`
 - Revenue metrics (ARR, NRR) or ASC 606 accounting → use `senior-revenue-accountant`
 
 ## Core Workflows

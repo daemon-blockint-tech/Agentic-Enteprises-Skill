@@ -9,6 +9,8 @@ description: |
   (applied-ai-architect-commercial-enterprise), skills portfolio (ai-skill-manager), or vertical AI
   engineering management (engineering-manager-vertical-ai-products).
   Agent prompt authoring and eval harness design: prompt-engineer-agent-prompts-evals.
+  Safeguard inference gateways and moderation infra: ml-infrastructure-engineer-safeguards.
+  Safeguard classifier research: ml-research-engineer-safeguards.
 ---
 
 # AI Engineer
@@ -51,6 +53,8 @@ description: |
 | Cross-system boundaries and platform ADRs | `senior-system-architecture` |
 | Commercial/enterprise AI architecture | `applied-ai-architect-commercial-enterprise` |
 | Agent skills catalog and validation | `ai-skill-manager` |
+| Safeguard serving stack and policy runtime | `ml-infrastructure-engineer-safeguards` |
+| Safety model R&D and benchmark design | `ml-research-engineer-safeguards` |
 
 ## Core Workflows
 

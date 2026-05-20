@@ -1,0 +1,136 @@
+# Revenue Operations Workflow
+# End-to-end revenue operations from legal counsel to transaction principal
+
+name: revenue-ops
+description: End-to-end revenue operations from legal counsel to transaction principal
+version: 1.0.0
+
+execution_mode: chain
+timeout_per_skill: 300s
+max_retries: 2
+
+skills:
+  - name: commercial-counsel
+    position: 1
+    description: Review commercial agreements and legal terms
+    inputs:
+      - contract_drafts
+      - legal_requirements
+      - business_terms
+      - compliance_rules
+    outputs:
+      - legal_review
+      - contract_recommendations
+      - compliance_assessment
+      - risk_analysis
+    validation:
+      - build-validator:
+          checks: [compliance, security]
+
+  - name: deal-operations-administrator
+    position: 2
+    description: Manage deal operations and contract administration
+    inputs:
+      - legal_review (from commercial-counsel)
+      - deal_terms
+      - contract_requirements
+      - execution_criteria
+    outputs:
+      - deal_execution_plan
+      - contract_administration
+      - stakeholder_coordination
+      - status_reports
+    validation:
+      - build-validator:
+          checks: [compliance, architecture]
+
+  - name: senior-revenue-accountant
+    position: 3
+    description: Manage revenue accounting and recognition
+    inputs:
+      - deal_execution_plan (from deal-operations-administrator)
+      - transaction_data
+      - revenue_contracts
+      - accounting_standards
+    outputs:
+      - revenue_recognition
+      - financial_reports
+      - compliance_documentation
+      - audit_support
+    validation:
+      - build-validator:
+          checks: [compliance, cost, architecture]
+      - compliance-engineer:
+          checks: [financial_compliance, tax_compliance]
+
+  - name: product-management-monetization
+    position: 4
+    description: Design product monetization and pricing strategy
+    inputs:
+      - revenue_recognition (from senior-revenue-accountant)
+      - product_specs
+      - market_data
+      - pricing_requirements
+    outputs:
+      - monetization_strategy
+      - pricing_model
+      - revenue_projections
+      - go_to_market_plan
+    validation:
+      - build-validator:
+          checks: [architecture, cost, compliance]
+
+  - name: transaction-manager
+    position: 5
+    description: Manage transaction workflows and payment processing
+    inputs:
+      - monetization_strategy (from product-management-monetization)
+      - transaction_requirements
+      - payment_specs
+      - monitoring_criteria
+    outputs:
+      - transaction_workflows
+      - payment_processing
+      - monitoring_setup
+      - compliance_reports
+    validation:
+      - build-validator:
+          checks: [security, compliance, performance]
+
+  - name: transaction-principal
+    position: 6
+    description: Design transaction architecture and strategic frameworks
+    inputs:
+      - transaction_workflows (from transaction-manager)
+      - business_requirements
+      - transaction_volumes
+      - scalability_needs
+    outputs:
+      - transaction_architecture
+      - strategy_document
+      - scalability_plan
+      - compliance_framework
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, compliance, scalability]
+
+triggers:
+  - "setup revenue operations"
+  - "deal to revenue workflow"
+  - "end-to-end revenue process"
+  - "revenue operations from scratch"
+  - "build revenue pipeline"
+
+error_handling:
+  on_failure:
+    - retry: true
+      max_retries: 2
+    - fallback: return_error_to_user
+    - notify: true
+
+state_management:
+  persistence: ai-memory-developer
+  context_passing: structured_json
+  validation_points:
+    - after: senior-revenue-accountant
+    - after: transaction-manager

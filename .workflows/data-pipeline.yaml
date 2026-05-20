@@ -1,0 +1,150 @@
+# Data Pipeline Workflow
+# Build end-to-end data pipeline from architecture to BI dashboard
+
+name: data-pipeline
+description: Build end-to-end data pipeline from architecture to BI dashboard
+version: 1.0.0
+
+execution_mode: chain
+timeout_per_skill: 300s
+max_retries: 2
+
+skills:
+  - name: data-architect
+    position: 1
+    description: Design data architecture and schema
+    inputs:
+      - business_requirements
+      - data_sources
+      - compliance_needs
+      - scalability_goals
+    outputs:
+      - data_architecture_design
+      - schema_definitions
+      - governance_framework
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, compliance]
+
+  - name: data-warehouse-engineer
+    position: 2
+    description: Build data warehouse and ETL pipelines
+    inputs:
+      - data_architecture_design (from data-architect)
+      - source_systems
+      - transformation_rules
+      - performance_requirements
+    outputs:
+      - warehouse_schema
+      - etl_pipelines
+      - optimization_recommendations
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: analytics-data-engineer
+    position: 3
+    description: Create analytics data pipelines
+    inputs:
+      - warehouse_schema (from data-warehouse-engineer)
+      - analytics_requirements
+      - data_sources
+      - transformation_rules
+    outputs:
+      - data_pipelines
+      - analytics_infrastructure
+      - monitoring_setup
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: data-scientist
+    position: 4
+    description: Build ML models and statistical analyses
+    inputs:
+      - data_pipelines (from analytics-data-engineer)
+      - business_questions
+      - feature_requirements
+      - model_criteria
+    outputs:
+      - ml_models
+      - statistical_analyses
+      - predictions
+      - insights
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, performance]
+      - ai-risk-governance:
+          checks: [model_risk, data_privacy, bias]
+
+  - name: bi-analyst
+    position: 5
+    description: Create BI dashboards and visualizations
+    inputs:
+      - ml_models (from data-scientist)
+      - business_metrics
+      - visualization_requirements
+      - stakeholder_needs
+    outputs:
+      - dashboards
+      - reports
+      - visualizations
+      - business_insights
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: data-system-ops-lead
+    position: 6
+    description: Set up data operations and monitoring
+    inputs:
+      - dashboards (from bi-analyst)
+      - monitoring_criteria
+      - sla_requirements
+      - incident_reports
+    outputs:
+      - operations_plan
+      - monitoring_setup
+      - incident_response
+      - sla_reports
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance, scalability]
+
+  - name: data-manager
+    position: 7
+    description: Manage data program and governance
+    inputs:
+      - operations_plan (from data-system-ops-lead)
+      - governance_policies
+      - stakeholder_needs
+      - compliance_rules
+    outputs:
+      - program_management_plan
+      - governance_framework
+      - strategy_document
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, compliance, scalability]
+
+triggers:
+  - "build data pipeline"
+  - "create analytics pipeline"
+  - "end-to-end data workflow"
+  - "data pipeline from scratch"
+  - "build analytics system"
+
+error_handling:
+  on_failure:
+    - retry: true
+      max_retries: 2
+    - fallback: return_error_to_user
+    - notify: true
+
+state_management:
+  persistence: ai-memory-developer
+  context_passing: structured_json
+  validation_points:
+    - after: data-architect
+    - after: data-scientist
+    - after: data-system-ops-lead

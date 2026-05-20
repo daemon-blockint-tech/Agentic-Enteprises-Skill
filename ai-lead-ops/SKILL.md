@@ -9,6 +9,8 @@ description: |
   skills portfolio (ai-skill-manager), or vertical AI product eng management
   (engineering-manager-vertical-ai-products).
   Prompt/eval team management and golden-set release policy: engineering-manager-agent-prompts-evals.
+  Safeguard inference platform: ml-infrastructure-engineer-safeguards. Safeguard model research:
+  ml-research-engineer-safeguards.
 ---
 
 # AI Lead Ops
@@ -47,6 +49,8 @@ description: |
 | Token optimization roadmap and initiative backlog | `ai-token-improvement-plan-engineer` |
 | Commercial/enterprise AI architecture | `applied-ai-architect-commercial-enterprise` |
 | Skills portfolio governance | `ai-skill-manager` |
+| Safeguard inference platform | `ml-infrastructure-engineer-safeguards` |
+| Safety classifier research | `ml-research-engineer-safeguards` |
 
 ## Core Workflows
 

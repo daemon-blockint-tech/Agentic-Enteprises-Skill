@@ -9,7 +9,8 @@ description: |
   policies, triaging CVEs, mapping controls to SOC 2/ISO 27001/SSDF, securing GitHub Actions or agentic
   CI workflows, or running pre-release security reviews—not for general cloud provisioning without
   a security lens (use infrastructure-engineer), LLM prompt guardrails (prompt-engineer), or
-  cluster Helm/add-on operations without security policy focus (cluster-deployment-engineer).
+  cluster Helm/add-on operations without security policy focus (cluster-deployment-engineer), or
+  authorized manual web/API pentest (web-pentester), or binary/firmware RE (reverse-engineer).
 ---
 
 # DevSecOps
@@ -27,9 +28,14 @@ description: |
 - Provision general cloud infrastructure without a security gate focus → `infrastructure-engineer`
 - Operate build/deploy pipelines without security requirements → `devops`
 - Implement corporate IdP, KMS, PAM, SIEM, or EDR controls → `information-security-engineer`
-- Triage live SOC alerts or tune SIEM detections → `defensive-security-analyst`
+- IAM entitlement design, access reviews, federation (non-pipeline) → `iam-specialist`
+- Triage live SOC alerts or run SOAR playbooks → `soc-analyst`
+- Threat hunts or SIEM detection authoring → `defensive-security-analyst`
 - Define company-wide security strategy or GRC roadmap → `cybersecurity`
 - Bootstrap clusters, Helm releases, ingress, routine pod debug → `cluster-deployment-engineer`
+- Execute authorized penetration tests or exploit PoCs → `penetration-tester`
+- Manual web/API OWASP testing and retest → `web-pentester`
+- Disassembly, decompilation, patch diff, or malware RE lab work → `reverse-engineer`
 
 ## Related skills
 
@@ -41,10 +47,16 @@ description: |
 | Data governance, PII in warehouses | `data-architect` |
 | Security runbooks and customer-facing docs | `tech-writer-researcher` |
 | Platform IAM, KMS, SIEM/EDR operations | `information-security-engineer` |
+| Workforce IAM, reviews, federation, PAM policy | `iam-specialist` |
+| Cloud org guardrails, CSPM, multi-account posture | `cloud-security-engineer` |
 | Product tenancy, service authZ, customer data isolation | `product-infrastructure-security-engineer` |
 | Audit evidence pipelines and control mapping | `compliance-engineer` |
+| Pipeline compromise incident response | `incident-responder` |
+| Binary RE, patch diff, defensive malware analysis | `reverse-engineer` |
 | K8s workload deploy and cluster day-2 ops | `cluster-deployment-engineer` |
 | External researcher disclosure program | `technical-program-manager-security-cvd` |
+| Authorized pentest and retest | `penetration-tester` |
+| Manual web/API OWASP testing | `web-pentester` |
 
 ## Core Workflows
 

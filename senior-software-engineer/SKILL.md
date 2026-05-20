@@ -8,8 +8,8 @@ description: |
   correctness, improving legacy code, choosing trade-offs (coupling, consistency, latency), estimating
   complex work, or mentoring engineers—not for stack-specific full-stack UI delivery (senior-fullstack-developer),
   deployment rollout strategy (deployment-strategist), infrastructure/IaC (infrastructure-engineer),
-  org-wide security programs (cybersecurity), or cross-system ADRs and architecture review
-  (senior-system-architecture).
+  dedicated perf profiling and load testing (performance-engineer), org-wide security programs
+  (cybersecurity), or cross-system ADRs and architecture review (senior-system-architecture).
 ---
 
 # Senior Software Engineer
@@ -42,6 +42,7 @@ description: |
 | Requirements and BRDs | `business-analyst` |
 | AI/LLM product features | `ai-engineer` |
 | Cross-service ADRs, NFRs, architecture review | `senior-system-architecture` |
+| Profiling, load tests, latency SLOs | `performance-engineer` |
 
 ## Core Workflows
 

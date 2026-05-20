@@ -10,7 +10,8 @@ description: |
   announcements—not for management consulting deliverables (business-consultant), API/docs/runbooks
   (tech-writer-researcher), on-call/paging/SEV program design (incident-management-engineer),
   single-ticket customer replies (support-engineer), exec/community escalation program
-  (community-executive-escalations-program-manager), or legal contract language (commercial-counsel).
+  (community-executive-escalations-program-manager), developer training programs
+  (developer-education-lead), or legal contract language (commercial-counsel).
 ---
 
 # Communication Lead
@@ -45,6 +46,7 @@ description: |
 | Incident program, status page workflow | `incident-management-engineer` |
 | Release rollout and stakeholder brief | `deployment-strategist` |
 | Cross-team program coordination | `technical-program-manager` |
+| Developer training and certification programs | `developer-education-lead` |
 | Customer escalation and ticket comms | `support-engineer` |
 | Exec/VIP and community escalation program | `community-executive-escalations-program-manager` |
 | Security incident policy and enterprise IR | `cybersecurity` |

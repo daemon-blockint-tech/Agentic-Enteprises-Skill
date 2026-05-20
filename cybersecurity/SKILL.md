@@ -5,13 +5,12 @@ description: |
   threat management, incident response, identity security, and GRC alignment (SOC 2, ISO 27001, NIST CSF).
   Use when defining security strategy, assessing risk, designing defense-in-depth, running security
   incidents, scoping penetration tests, writing security policies, or high-level GRC strategy—not for
-  hands-on control mapping and automated audit evidence (compliance-engineer),
+  hands-on audit evidence automation (compliance-engineer), GRC program/audit prep
+  (compliance-specialist),
   embedding scans in CI/CD (devsecops), provisioning cloud networks (infrastructure-engineer), or
-  adversarial LLM testing (ai-redteam), or operational on-call/SEV program design
-  (incident-management-engineer). For application solution architecture and integration ADRs,
-  use senior-system-architecture; applied AI use applied-ai-architect-commercial-enterprise;
-  incident messaging use communication-lead; data center facility use data-center-design-execution-lead.
-  CVD / disclosure program ops: technical-program-manager-security-cvd.
+  LLM or enterprise red team (ai-redteam, red-team-specialist), binary RE (reverse-engineer),
+  web/API pentest (web-pentester), or on-call/SEV program
+  (incident-management-engineer).
 ---
 
 # Cybersecurity
@@ -26,10 +25,16 @@ description: |
 
 ## When NOT to Use
 
+- GRC program, framework scope, gap plans, audit prep → `compliance-specialist`
 - Implement audit evidence automation or control-by-control mapping → `compliance-engineer`
 - Add SAST, SBOM, OIDC, or pipeline security gates → `devsecops`
-- Triage SOC alerts, SIEM logs, or detections → `defensive-security-analyst`
-- Execute authorized offensive testing or PoCs → `offensive-security-analyst`
+- Triage SOC alerts, SIEM queues, or SOAR cases → `soc-analyst`
+- Proactive threat hunts and hunt program design → `threat-hunter`
+- Alert-driven investigation and detection tuning → `defensive-security-analyst`
+- Execute authorized penetration tests or PoCs → `penetration-tester`
+- Lead red team / adversary simulation campaigns → `red-team-specialist`
+- Execute web/API OWASP assessments → `web-pentester`
+- Hands-on binary, firmware, or protocol reverse engineering → `reverse-engineer`
 - Provision cloud networks, clusters, or infrastructure modules → `infrastructure-engineer`
 - Design application integration ADRs → `senior-system-architecture`
 
@@ -41,18 +46,32 @@ description: |
 | Cloud/K8s hardening implementation | `infrastructure-engineer` |
 | AI model risk, policies, EU AI Act | `ai-risk-governance` |
 | LLM jailbreaks and prompt injection tests | `ai-redteam` |
-| SOC alert triage, SIEM hunts, detection tuning | `defensive-security-analyst` |
-| Authorized pentest, red team, offensive PoCs | `offensive-security-analyst` |
+| SOC alert triage, playbooks, shift handoffs | `soc-analyst` |
+| Proactive threat hunts, ATT&CK campaigns, hunt metrics | `threat-hunter` |
+| Alert investigation, detection tuning, DFIR depth | `defensive-security-analyst` |
+| Authorized pentest, exploitation, retest | `penetration-tester` |
+| CTI function, intel briefs, IOC/TTP production, ISAC sharing | `cti-analyst` |
+| Red team, purple team, adversary simulation | `red-team-specialist` |
+| Binary RE, patch diff, defensive malware analysis | `reverse-engineer` |
+| Network/AD/infra pentest methodology | `network-pentester` |
+| Web/API pentest methodology | `web-pentester` |
+| Web/API OWASP and proxy-based pentest | `web-pentester` |
 | Implement IAM, encryption, SIEM, guardrails | `information-security-engineer` |
 | Product multi-tenancy, customer data plane security | `product-infrastructure-security-engineer` |
+| GRC program, audit prep, vendor questionnaires | `compliance-specialist` |
 | Control implementation, audit evidence automation | `compliance-engineer` |
 | On-call, SEV, postmortem, paging integrations | `incident-management-engineer` |
+| Active security incident response (CSIRT) | `incident-responder` |
+| SOC alert triage | `soc-analyst` |
 | Vendor/customer contract security exhibits and DPAs | `commercial-counsel` |
 | Solution architecture review (app layer) | `senior-system-architecture` |
 | Applied AI / LLM commercial & enterprise architecture | `applied-ai-architect-commercial-enterprise` |
 | Crisis and security incident messaging | `communication-lead` |
 | Data center facility design and commissioning | `data-center-design-execution-lead` |
 | CVD, bounty, disclosure calendar | `technical-program-manager-security-cvd` |
+| Evidence acquisition, super-timelines, forensic reports for legal/IR | `digital-forensics-analyst` |
+| Risk registers, residual scoring, committee/board risk narrative | `security-risk-analyst` |
+| BCM/DRP, RTO/RPO, ransomware recovery, restore tests, tabletops | `bcm-disaster-recovery-specialist` |
 
 ## Core Workflows
 

@@ -5,8 +5,9 @@ description: |
   vendor and customer contracts, DPAs, SLAs, limitation of liability, indemnity, IP, payment terms,
   and redline/issue logs with business impact notes.
   Use when reviewing or negotiating commercial terms, comparing vendor or customer paper, drafting
-  negotiation positions, or triaging contract risk before sign-off—not for SOC/ISO audit evidence
-  (compliance-engineer), revenue recognition under ASC 606 (senior-revenue-accountant), or product
+  negotiation positions, or triaging contract risk before sign-off—not for SOC/ISO GRC programs or
+  vendor questionnaire ops (compliance-specialist), technical audit evidence (compliance-engineer),
+  revenue recognition under ASC 606 (senior-revenue-accountant), or product
   requirements (business-analyst), strategy (business-consultant). Corporate/board: corporate-counsel.
   AI architecture for contract review: applied-ai-architect-commercial-enterprise. M&A economics
   mandate: transaction-principal. Drafting assistance only; human counsel must approve.
@@ -24,6 +25,7 @@ description: |
 
 ## When NOT to Use
 
+- GRC program, audit prep, vendor security questionnaires → `compliance-specialist`
 - Control mapping and audit evidence packs → `compliance-engineer`
 - ASC 606 performance obligations and SSP → `senior-revenue-accountant`
 - BRDs, user stories, or process maps → `business-analyst`
@@ -43,6 +45,7 @@ description: |
 
 | Need | Skill |
 |---|---|
+| GRC program, audit prep, vendor questionnaires | `compliance-specialist` |
 | Privacy/regulatory control evidence | `compliance-engineer` |
 | Revenue impact of contract structure | `senior-revenue-accountant` |
 | Business requirements behind deal | `business-analyst` |
@@ -51,6 +54,7 @@ description: |
 | Customer-facing SLA operations | `incident-management-engineer`, `devops` |
 | Board, entity, equity, corporate transaction close | `corporate-counsel` |
 | Quote-to-cash ops, order assembly, CRM, signatures | `deal-operations-administrator` |
+| Sourcing, inventory, logistics (business terms input) | `supply-chain-manager` |
 | M&A diligence and closing coordination | `transaction-manager` |
 | AI architecture for data/subprocessor terms | `applied-ai-architect-commercial-enterprise` |
 

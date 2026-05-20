@@ -47,6 +47,7 @@ description: |
 | Physical security and compliance | `cybersecurity`, `compliance-engineer` |
 | Exec status narrative | `communication-lead` |
 | WIP/CIP and capex capitalization | `director-infrastructure-capex-accounting` |
+| Strategic sourcing and supplier SCM | `supply-chain-manager` |
 
 ## Core Workflows
 

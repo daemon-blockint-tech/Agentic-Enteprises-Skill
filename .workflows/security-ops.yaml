@@ -1,0 +1,203 @@
+# Security Operations Workflow
+# Full security audit with D3FEND response framework
+
+name: security-ops
+description: Full security audit with D3FEND response framework
+version: 1.0.0
+
+execution_mode: chain
+timeout_per_skill: 600s
+max_retries: 1
+
+skills:
+  - name: offensive-security-analyst
+    position: 1
+    description: Conduct penetration testing and vulnerability assessment
+    inputs:
+      - target_systems
+      - scope
+      - attack_vectors
+      - testing_criteria
+    outputs:
+      - vulnerability_report
+      - exploit_demonstrations
+      - remediation_recommendations
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: defensive-security-analyst
+    position: 2
+    description: Conduct defensive security operations and threat hunting
+    inputs:
+      - vulnerability_report (from offensive-security-analyst)
+      - threat_intelligence
+      - monitoring_data
+      - security_policies
+    outputs:
+      - threat_detection
+      - monitoring_setup
+      - incident_analysis
+      - defensive_recommendations
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: d3fend-harden
+    position: 3
+    description: Harden systems against identified threats
+    inputs:
+      - defensive_recommendations (from defensive-security-analyst)
+      - system_configs
+      - hardening_criteria
+    outputs:
+      - hardening_plan
+      - security_controls
+      - configuration_changes
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: d3fend-detect
+    position: 4
+    description: Implement threat detection mechanisms
+    inputs:
+      - hardening_plan (from d3fend-harden)
+      - detection_criteria
+      - monitoring_requirements
+    outputs:
+      - detection_rules
+      - monitoring_setup
+      - alert_configuration
+    validation:
+      - build-validator:
+          checks: [security, performance]
+
+  - name: d3fend-evict
+    position: 5
+    description: Evict identified threats from systems
+    inputs:
+      - detection_rules (from d3fend-detect)
+      - threat_indicators
+      - eviction_criteria
+    outputs:
+      - eviction_plan
+      - threat_removal_steps
+      - verification_procedures
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: d3fend-isolate
+    position: 6
+    description: Isolate compromised systems
+    inputs:
+      - eviction_plan (from d3fend-evict)
+      - network_topology
+      - isolation_criteria
+    outputs:
+      - isolation_plan
+      - network_segmentation
+      - containment_procedures
+    validation:
+      - build-validator:
+          checks: [security, architecture]
+
+  - name: d3fend-restore
+    position: 7
+    description: Restore systems to secure state
+    inputs:
+      - isolation_plan (from d3fend-isolate)
+      - backup_data
+      - restoration_criteria
+    outputs:
+      - restoration_plan
+      - recovery_procedures
+      - verification_steps
+    validation:
+      - build-validator:
+          checks: [security, architecture, performance]
+
+  - name: d3fend-model
+    position: 8
+    description: Model threats and update security posture
+    inputs:
+      - restoration_plan (from d3fend-restore)
+      - threat_models
+      - modeling_criteria
+    outputs:
+      - updated_threat_models
+      - security_posture_assessment
+      - risk_analysis
+    validation:
+      - build-validator:
+          checks: [security, architecture]
+
+  - name: d3fend-deceive
+    position: 9
+    description: Implement deception technology
+    inputs:
+      - updated_threat_models (from d3fend-model)
+      - deception_criteria
+      - honeypot_requirements
+    outputs:
+      - deception_plan
+      - honeypot_setup
+      - attacker_tracking
+    validation:
+      - build-validator:
+          checks: [security, architecture]
+
+  - name: compliance-engineer
+    position: 10
+    description: Conduct compliance audit and documentation
+    inputs:
+      - deception_plan (from d3fend-deceive)
+      - compliance_requirements
+      - regulatory_rules
+      - audit_criteria
+    outputs:
+      - compliance_report
+      - audit_results
+      - remediation_plan
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: incident-management-engineer
+    position: 11
+    description: Finalize incident response and post-mortem
+    inputs:
+      - compliance_report (from compliance-engineer)
+      - incident_reports
+      - response_procedures
+      - stakeholder_lists
+    outputs:
+      - incident_response_plan
+      - post_mortem
+      - stakeholder_communications
+    validation:
+      - build-validator:
+          checks: [security, compliance, architecture]
+
+triggers:
+  - "full security audit"
+  - "penetration test with response"
+  - "security assessment with D3FEND"
+  - "end-to-end security operations"
+  - "security audit and response"
+
+error_handling:
+  on_failure:
+    - retry: true
+      max_retries: 1
+    - fallback: escalate_to_security_team
+    - notify: true
+
+state_management:
+  persistence: ai-memory-developer
+  context_passing: structured_json
+  validation_points:
+    - after: offensive-security-analyst
+    - after: d3fend-deceive
+    - after: compliance-engineer

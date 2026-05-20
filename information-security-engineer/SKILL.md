@@ -6,11 +6,12 @@ description: |
   cloud guardrails, hardening baselines, and remediation engineering for vulnerabilities.
   Use when building SSO/RBAC/PAM patterns, configuring KMS or certificate lifecycle, deploying WAF/DLP
   or EDR connectors, writing security-as-code policies (OPA, SCPs, CIS benchmarks), integrating
-  logging to SIEM, automating security workflows, or validating control fixes—not for SOC alert triage
-  (defensive-security-analyst), authorized pentesting (offensive-security-analyst), CI pipeline gates
-  only (devsecops), general platform provisioning without security ownership (infrastructure-engineer),
-  or security program strategy and GRC (cybersecurity), or multi-tenant product isolation and
-  customer-data boundaries in product services (product-infrastructure-security-engineer).
+  logging to SIEM, automating security workflows, or validating control fixes—not for SOC triage
+  (soc-analyst), pentesting (penetration-tester, network-pentester, web-pentester), red team
+  (red-team-specialist), CI gates only (devsecops), platform provisioning without security ownership
+  (infrastructure-engineer), CISO/exec program (chief-information-security-officer),
+  security program strategy (cybersecurity), GRC program and audit prep (compliance-specialist),
+  or product tenancy isolation (product-infrastructure-security-engineer).
 ---
 
 # Information Security Engineer
@@ -25,24 +26,42 @@ description: |
 
 ## When NOT to Use
 
-- Define security strategy, policy, or GRC program direction → `cybersecurity`
-- Triage alerts, investigate incidents, or write detections → `defensive-security-analyst`
-- Execute authorized pentests or exploit validation → `offensive-security-analyst`
+- Board briefings, risk appetite, security budget, crisis exec comms → `chief-information-security-officer`
+- Define security strategy or enterprise security program → `cybersecurity`
+- GRC program, framework scope, audit prep, questionnaires → `compliance-specialist`
+- Triage alerts, SOC playbooks, or shift ops → `soc-analyst`
+- Deep investigation, hunts, or detection authoring → `defensive-security-analyst`
+- Execute authorized pentests or exploit validation → `penetration-tester`, `network-pentester`, `web-pentester`
+- Plan adversary simulation or purple-team campaigns → `red-team-specialist`
 - Add CI/CD security gates, SBOMs, or artifact signing only → `devsecops`
 - Design tenant isolation and product data-plane boundaries → `product-infrastructure-security-engineer`
+- Cloud org guardrails, CSPM, multi-account IAM/network security → `cloud-security-engineer`
+- IAM program design, access reviews, federation, PAM, SoD (without tool deploy) → `iam-specialist`
 
 ## Related skills
 
 | Need | Skill |
 |---|---|
-| Security strategy, policies, audit evidence | `cybersecurity` |
+| CISO program, board KRIs, appetite, budget | `chief-information-security-officer` |
+| AWS/GCP/Azure guardrails, CSPM, cloud IAM/network | `cloud-security-engineer` |
+| GRC program, gap plans, audit coordination | `compliance-specialist` |
+| Security strategy, policies | `cybersecurity` |
+| Audit evidence automation | `compliance-engineer` |
 | CI/CD scans, SBOM, pipeline OIDC | `devsecops` |
 | VPC, K8s, Terraform platform (general) | `infrastructure-engineer` |
-| Alert triage and detections | `defensive-security-analyst` |
-| Pentest findings to reproduce | `offensive-security-analyst` |
+| SOC triage and SOAR playbooks | `soc-analyst` |
+| Red team gaps → detection content | `red-team-specialist` |
+| Declared security incident response (CSIRT) | `incident-responder` |
+| STIX/TAXII feed requirements, intel-driven blocklists | `cti-analyst` |
+| Threat hunts and detection engineering | `defensive-security-analyst` |
+| Pentest findings to reproduce | `penetration-tester`, `network-pentester`, `web-pentester` |
 | Control documentation | `tech-writer-researcher` |
 | Product tenancy, customer data plane | `product-infrastructure-security-engineer` |
 | CVD program, bounty, disclosure calendar | `technical-program-manager-security-cvd` |
+| Post-incident artifact analysis and chain of custody | `digital-forensics-analyst` |
+| Risk registers, residual scoring, treatment decisions | `security-risk-analyst` |
+| IAM lifecycle, entitlements, reviews, federation, PAM | `iam-specialist` |
+| BCM/DRP for security tooling, immutability, restore tests | `bcm-disaster-recovery-specialist` |
 
 ## Core Workflows
 

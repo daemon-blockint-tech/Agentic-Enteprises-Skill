@@ -8,7 +8,8 @@ description: |
   "warehouse partitioning", "dimensional modeling", "data warehouse design",
   "query performance tuning", or "warehouse migration".
   For dbt project structure, staging/mart layers, incremental models, and analytics CI, use
-  analytics-data-engineer—not data-warehouse-engineer alone.
+  analytics-data-engineer—not data-warehouse-engineer alone. OLTP app latency and load testing:
+  performance-engineer.
 ---
 
 # Data Warehouse Engineer
@@ -58,6 +59,7 @@ SQL optimization, ETL/ELT patterns, partitioning strategies, and warehouse-speci
 - dbt layers, mart tests, exposures, and analytics engineering workflows → use `analytics-data-engineer`
 - ML feature stores, model serving, or experiment analysis → use `data-scientist`
 - On-call leadership for the full data platform org → use `data-system-ops-lead`
+- Application runtime profiling, API load tests, OLTP latency SLOs → use `performance-engineer`
 
 ## Core Workflows
 

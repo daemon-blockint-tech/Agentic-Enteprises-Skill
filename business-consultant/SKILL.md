@@ -39,6 +39,8 @@ description: |
 - Business model canvas, market sizing, unit economics research → `business-model-researcher`
 - M&A closing matrix, signing, funds flow → `transaction-manager`
 - Live M&A thesis, valuation, negotiation → `transaction-principal`
+- Cloud-specific TCO, commit portfolio, and hyperscaler pricing economics → `cloud-economist`
+- Technical solution design, integration architecture, RFP/RFI, PoC scope → `solutions-architect`
 
 ## Related skills
 
@@ -52,10 +54,12 @@ description: |
 | Research synthesis and long-form docs | `tech-writer-researcher` |
 | Product UX and journeys | `product-designer` |
 | Canvas, TAM, competitor pricing research | `business-model-researcher` |
+| Cloud TCO, migration, and commit business cases | `cloud-economist` |
 | Applied AI solution architecture | `applied-ai-architect-commercial-enterprise` |
 | Company-wide messaging and comms cadence | `communication-lead` |
 | M&A deal execution and closing | `transaction-manager` |
 | M&A deal principal and IC | `transaction-principal` |
+| Customer/partner technical solution and RFP | `solutions-architect` |
 
 ## Core Workflows
 

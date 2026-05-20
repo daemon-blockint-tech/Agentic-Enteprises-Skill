@@ -9,6 +9,7 @@ description: |
   backend APIs or databases (fullstack-software-engineer, senior-fullstack-developer), design-only
   critiques without implementation, CI/CD (devops), or cross-service system RFCs (senior-software-engineer).
   For implementing screens from design specs, component states, and visual QA, use ui-software-engineer.
+  Deep perf investigations and load/RUM analysis: performance-engineer.
 ---
 
 # Senior Front End Software Engineer
@@ -38,7 +39,9 @@ description: |
 | Pipeline and preview deploys | `devops` |
 | UX flows and design specs | `product-designer` |
 | UI implementation from specs | `ui-software-engineer` |
+| RUM/load investigation and perf reports | `performance-engineer` |
 | Browser auth, CSRF, CORS, session cookies | `web-application-developer` |
+| Authorized web/API security testing context | `web-pentester` |
 
 ## Core Workflows
 

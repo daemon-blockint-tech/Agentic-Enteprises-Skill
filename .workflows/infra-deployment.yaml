@@ -1,0 +1,136 @@
+# Infrastructure Deployment Workflow
+# Deploy infrastructure from design to production
+
+name: infra-deployment
+description: Deploy infrastructure from design to production
+version: 1.0.0
+
+execution_mode: chain
+timeout_per_skill: 300s
+max_retries: 2
+
+skills:
+  - name: infrastructure-engineer
+    position: 1
+    description: Design cloud infrastructure
+    inputs:
+      - application_requirements
+      - scalability_needs
+      - budget_constraints
+      - compliance_rules
+    outputs:
+      - infrastructure_design
+      - deployment_plan
+      - cost_estimates
+      - compliance_checklist
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, compliance]
+
+  - name: platform-engineer
+    position: 2
+    description: Build internal developer platform
+    inputs:
+      - infrastructure_design (from infrastructure-engineer)
+      - developer_needs
+      - platform_requirements
+      - integration_points
+    outputs:
+      - platform_design
+      - developer_tools
+      - integration_apis
+      - documentation
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: cluster-deployment-engineer
+    position: 3
+    description: Deploy Kubernetes clusters
+    inputs:
+      - platform_design (from platform-engineer)
+      - cluster_requirements
+      - container_images
+      - scaling_policies
+    outputs:
+      - cluster_deployment
+      - configuration
+      - scaling_setup
+      - monitoring
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: devops
+    position: 4
+    description: Build CI/CD pipelines and automation
+    inputs:
+      - cluster_deployment (from cluster-deployment-engineer)
+      - application_code
+      - deployment_requirements
+      - testing_criteria
+    outputs:
+      - cicd_pipelines
+      - automation_scripts
+      - iac_templates
+      - deployment_workflows
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: devsecops
+    position: 5
+    description: Integrate security into CI/CD
+    inputs:
+      - cicd_pipelines (from devops)
+      - security_requirements
+      - vulnerability_scans
+      - compliance_rules
+    outputs:
+      - secure_pipelines
+      - security_automation
+      - vulnerability_remediation
+      - compliance_reports
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+      - compliance-engineer:
+          checks: [security_compliance]
+
+  - name: deployment-strategist
+    position: 6
+    description: Design deployment strategy
+    inputs:
+      - secure_pipelines (from devsecops)
+      - application_specs
+      - deployment_requirements
+      - risk_tolerance
+    outputs:
+      - deployment_strategy
+      - rollout_plan
+      - rollback_procedures
+      - risk_assessment
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, performance, scalability]
+
+triggers:
+  - "deploy infrastructure"
+  - "setup cloud platform"
+  - "production deployment"
+  - "infrastructure from scratch"
+  - "cloud deployment"
+
+error_handling:
+  on_failure:
+    - retry: true
+      max_retries: 2
+    - fallback: rollback_deployment
+    - notify: true
+
+state_management:
+  persistence: ai-memory-developer
+  context_passing: structured_json
+  validation_points:
+    - after: infrastructure-engineer
+    - after: devsecops

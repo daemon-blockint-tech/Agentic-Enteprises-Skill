@@ -6,7 +6,12 @@ description: |
   Use when red-teaming chatbots, agents, RAG systems, or copilots before launch, designing safety eval
   suites, reproducing reported vulnerabilities, or validating mitigations after incidents—not for writing
   corporate AI policy (ai-risk-governance), building production features (ai-engineer), or general
-  network penetration testing (cybersecurity).
+  network or app penetration testing (penetration-tester, network-pentester), enterprise adversary
+  simulation or purple-team campaigns (red-team-specialist), authorized web/API OWASP testing
+  (web-pentester), or binary/firmware RE (reverse-engineer). Production safeguard
+  serving and gateways:
+  ml-infrastructure-engineer-safeguards. Safety classifier R&D and benchmarks:
+  ml-research-engineer-safeguards.
 ---
 
 # AI Red Team
@@ -25,7 +30,10 @@ description: |
 
 - Writing corporate AI policy or risk governance frameworks → `ai-risk-governance`
 - Building production LLM features or RAG pipelines → `ai-engineer`
-- General network penetration testing or app/API security → `cybersecurity` / `offensive-security-analyst`
+- General network/AD/infra penetration testing → `network-pentester`
+- Authorized web/API OWASP testing (non-LLM) → `web-pentester`
+- Enterprise adversary simulation, MITRE ATT&CK campaigns, purple team → `red-team-specialist`
+- Binary, firmware, or protocol reverse engineering → `reverse-engineer`
 - CI/CD pipeline security → `devsecops`
 
 ## Related skills
@@ -36,8 +44,16 @@ description: |
 | Governance sign-off and risk tiers | `ai-risk-governance` |
 | Prompt design baselines | `prompt-engineer` |
 | CI pipeline security | `devsecops` |
-| App/API security testing | `cybersecurity` |
-| Network/app pentest and red team (non-LLM) | `offensive-security-analyst` |
+| Web/API OWASP pentest (non-LLM) | `web-pentester` |
+| Network/AD/infra pentest (non-LLM) | `network-pentester` |
+| Multi-domain pentest (non-LLM) | `penetration-tester` |
+| Enterprise red team / adversary simulation (non-LLM) | `red-team-specialist` |
+| Security program and pentest governance | `cybersecurity` |
+| Deploy/monitor safeguard inference path | `ml-infrastructure-engineer-safeguards` |
+| Safety benchmarks and classifier training | `ml-research-engineer-safeguards` |
+| Post-incident disk/memory/log forensics and chain of custody | `digital-forensics-analyst` |
+| Binary/protocol RE on non-LLM malware or implants | `reverse-engineer` |
+| Security incident coordination after AI abuse | `incident-responder` |
 
 ## Core Workflows
 

@@ -48,10 +48,12 @@ description: |
 | Large efficiency program coordination | `technical-program-manager` |
 | Enterprise DC portfolio and steering | `data-center-portfolio-planning-execution-lead` |
 | Rack-ready / MW delivery execution | `senior-data-center-capacity-delivery-manager` |
+| Server/GPU sourcing and supplier SCM | `supply-chain-manager` |
 | On-site install, asset/serial capture | `field-services-engineer` |
 | Executive/sustainability messaging | `communication-lead` |
 | Compliance evidence for facilities | `compliance-engineer` |
 | Compute capex, depreciation, cloud GL | `compute-accounting-manager` |
+| RL training GPU utilization patterns | `ml-systems-engineer-rl-engineering` |
 
 ## Core Workflows
 

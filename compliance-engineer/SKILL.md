@@ -5,13 +5,11 @@ description: |
   automating audit evidence, continuous compliance monitoring, gap remediation tracking, and
   audit-ready documentation for security and privacy programs (SOC 2, ISO 27001, GDPR technical
   measures, HIPAA safeguards, PCI scope boundaries, NIST CSF).
-  Use when implementing controls for audits, building evidence pipelines from infrastructure and
-  CI systems, designing continuous control monitoring, preparing auditor evidence packages,
-  translating policies into testable technical checks, or tracking remediation before attestations—not
-  for contract negotiation or commercial redlines (commercial-counsel), physical data center
-  design and commissioning (data-center-design-execution-lead), financial SOX journal controls (senior-revenue-accountant),
-  broad security strategy without audit lens (cybersecurity), pipeline scan configuration only
-  (devsecops), or AI model regulatory classification (ai-risk-governance).
+  Use when implementing audit controls, evidence pipelines, continuous monitoring, auditor packages,
+  testable policy checks, or pre-attestation remediation—not non-engineering GRC (compliance-specialist),
+  contracts (commercial-counsel), DC commissioning (data-center-design-execution-lead), financial SOX
+  journals (senior-revenue-accountant), security strategy without audit lens (cybersecurity), CI scans
+  only (devsecops), or AI model classification (ai-risk-governance).
 ---
 
 # Compliance Engineer
@@ -31,22 +29,33 @@ description: |
 - Financial close controls, journal entries, or SOX accounting evidence → `senior-revenue-accountant`
 - Broad security strategy without audit/control mapping → `cybersecurity`
 - CI/CD scan configuration without compliance evidence requirements → `devsecops`
+- Cloud-only framework evidence, residency, FedRAMP/PCI in AWS/GCP/Azure → `cloud-compliance-specialist`
+- GRC program charter, gap plans, audit prep, vendor questionnaires (non-technical) → `compliance-specialist`
+- Execute authorized penetration tests or write offensive findings → `penetration-tester`
 
 ## Related skills
 
 | Need | Skill |
 |---|---|
+| GRC program, scope, gap plans, audit coordination | `compliance-specialist` |
+| Cloud SOC/HIPAA/PCI evidence and CSPM mapping | `cloud-compliance-specialist` |
 | Infrastructure capex SOX and asset controls | `director-infrastructure-capex-accounting` |
 | Security program and IR strategy | `cybersecurity` |
 | CI gates, SBOM, SSDF evidence from pipelines | `devsecops` |
 | IAM, encryption, guardrail implementation | `information-security-engineer` |
+| Access reviews, entitlement catalog, SoD evidence design | `iam-specialist` |
 | Data governance and privacy architecture | `data-architect` |
 | AI system risk tiers and model governance | `ai-risk-governance` |
+| Enterprise cloud controls and residency design | `enterprise-cloud-architect` |
+| Privacy research for safeguard pipelines | `privacy-research-engineer-safeguards` |
 | Financial SOX control testing | `senior-revenue-accountant` |
 | Commercial contract review and negotiation | `commercial-counsel` |
+| Pentest reports (factual input to audits, not attestation) | `penetration-tester` |
 | Corporate governance, entity, board packages | `corporate-counsel` |
 | HRIS access reviews, training completion ops | `people-operations-specialist` |
 | Physical DC design and commissioning evidence | `data-center-design-execution-lead` |
+| Incident artifact analysis and forensic investigation reports (factual) | `digital-forensics-analyst` |
+| Security risk registers, inherent/residual scoring, acceptances | `security-risk-analyst` |
 
 ## Core Workflows
 

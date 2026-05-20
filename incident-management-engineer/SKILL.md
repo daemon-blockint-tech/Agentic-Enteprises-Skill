@@ -27,7 +27,7 @@ description: |
 ## When NOT to Use
 
 - Fix pipelines, deploys, or service code during outage → `devops`, `fullstack-software-engineer`
-- Investigate malware, phishing, or SOC alerts → `defensive-security-analyst`
+- Investigate malware, phishing, or SOC alerts → `soc-analyst` (deep hunts → `defensive-security-analyst`)
 - Enterprise security IR and legal/compliance program → `cybersecurity`
 - Cross-team launch programs and RAID → `technical-program-manager`
 - Data platform-specific ops → `data-system-ops-lead`
@@ -38,10 +38,14 @@ description: |
 
 | Need | Skill |
 |---|---|
-| SLOs, alerts, observability stack | `devops` |
+| SLOs, error budgets, reliability metrics | `site-reliability-engineer` |
+| Pipelines, alerts stack implementation | `devops` |
 | Rollback and cutover during outage | `deployment-strategist` |
 | Security incident playbooks | `cybersecurity` |
-| Alert triage and DFIR | `defensive-security-analyst` |
+| SOC alert triage and playbooks | `soc-analyst` |
+| Active CSIRT response, timelines, evidence | `incident-responder` |
+| BCP/DRP, cyber recovery playbooks, restore tests, tabletops | `bcm-disaster-recovery-specialist` |
+| Deep investigation, hunts, detections | `defensive-security-analyst` |
 | Major cross-team incident coordination | `technical-program-manager` |
 | Runbook documentation | `tech-writer-researcher` |
 | Customer ticket repro and engineering escalation | `support-engineer` |

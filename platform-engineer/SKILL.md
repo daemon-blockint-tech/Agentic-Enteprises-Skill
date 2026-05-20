@@ -36,6 +36,7 @@ description: |
 | Need | Skill |
 |---|---|
 | Cloud networking, core IaC modules | `infrastructure-engineer` |
+| Managed cloud services under platform | `cloud-engineer` |
 | Shared CI/CD, GitOps, SRE alerting | `devops` |
 | Canary/blue-green rollout decisions | `deployment-strategist` |
 | Pipeline and supply-chain security | `devsecops` |

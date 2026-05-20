@@ -36,6 +36,7 @@ description: |
 - Platform product roadmap for IDP → `platform-engineer`
 - Architecture decisions, ADRs, design review → `senior-system-architecture`
 - Strategy, business case, operating model → `business-consultant`
+- Technical discovery, solution architecture, RFP response authoring → `solutions-architect`
 
 ## Related skills
 
@@ -53,11 +54,13 @@ description: |
 | Incident ops: SEV, on-call, postmortems | `incident-management-engineer` |
 | Board resolutions, entity, corporate closing | `corporate-counsel` |
 | Launch and stakeholder messaging | `communication-lead` |
+| Developer training program rollout | `developer-education-lead` |
 | Exec/VIP and community customer escalations | `community-executive-escalations-program-manager` |
 | Data center design and facility execution | `data-center-design-execution-lead` |
 | Multi-site DC portfolio planning and steering | `data-center-portfolio-planning-execution-lead` |
 | M&A diligence, signing, closing coordination | `transaction-manager` |
 | Coordinated vulnerability disclosure program | `technical-program-manager-security-cvd` |
+| Customer solution design and delivery handoff package | `solutions-architect` |
 
 ## Core Workflows
 

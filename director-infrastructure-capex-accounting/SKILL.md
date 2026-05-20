@@ -33,6 +33,7 @@ description: |
 - Which sites to fund next → `data-center-portfolio-planning-execution-lead`
 - MEP design and commissioning specs → `data-center-design-execution-lead`
 - Control evidence automation packs → `compliance-engineer` (partner; director sets policy)
+- Infrastructure portfolio, capex envelope, executive narratives → `vp-of-infrastructure`
 
 ## Related skills
 
@@ -47,6 +48,7 @@ description: |
 | SOX evidence and control mapping | `compliance-engineer` |
 | Cross-team program tracking | `technical-program-manager` |
 | Executive messaging | `communication-lead` |
+| VP infrastructure leadership | `vp-of-infrastructure` |
 
 ## Core Workflows
 

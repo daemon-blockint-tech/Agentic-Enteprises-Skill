@@ -10,6 +10,8 @@ description: |
   multi-team program coordination (technical-program-manager), or incident program design
   (severity, on-call, postmortems, paging integrations—incident-management-engineer). For Kubernetes
   cluster bootstrap, Helm releases, add-ons, and cluster-level debugging, use cluster-deployment-engineer.
+  App latency profiling and load testing: performance-engineer. ML safeguard serving:
+  ml-infrastructure-engineer-safeguards. RL training platform jobs: ml-systems-engineer-rl-engineering.
 ---
 
 # DevOps
@@ -29,12 +31,15 @@ description: |
 - Provision core cloud networks, IAM, or Terraform modules as the main task → `infrastructure-engineer`
 - Add security gates, SBOMs, artifact signing, or CI threat modeling → `devsecops`
 - Design SEV programs, paging policy, or postmortem process → `incident-management-engineer`
+- Deep SLO/error-budget program, PRR, reliability engineering per service → `site-reliability-engineer`
 
 ## Related skills
 
 | Need | Skill |
 |---|---|
+| SLOs, error budgets, PRR, reliability ownership | `site-reliability-engineer` |
 | Cloud VPC, IAM, Terraform modules | `infrastructure-engineer` |
+| Managed cloud services and networking | `cloud-engineer` |
 | SAST, SBOM, OIDC hardening, pipeline security | `devsecops` |
 | Data pipeline SLAs and warehouse ops | `data-system-ops-lead` |
 | App code, APIs, UI | `senior-fullstack-developer` |
@@ -43,6 +48,7 @@ description: |
 | Cross-team milestones, RAID, launch council | `technical-program-manager` |
 | SEV model, on-call program, postmortem process | `incident-management-engineer` |
 | K8s cluster deploy and operations | `cluster-deployment-engineer` |
+| App profiling, load tests, perf regression | `performance-engineer` |
 
 ## Core Workflows
 

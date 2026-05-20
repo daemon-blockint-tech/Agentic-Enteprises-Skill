@@ -6,7 +6,8 @@ description: |
   and documentation operations.
   Triggers on "write technical documentation", "create API docs", "developer tutorial",
   "information architecture", "style guide", "content strategy", "documentation audit",
-  "user research", or "technical writing".
+  "user research", or "technical writing". Developer learning programs and curriculum:
+  developer-education-lead.
 ---
 
 # Technical Writer / Researcher
@@ -60,6 +61,7 @@ API documentation, user research, content strategy, and documentation operations
 - Strategy consulting, executive recommendations, operating model → use `business-consultant`
 - Business model and competitive monetization research → use `business-model-researcher`
 - All-hands, crisis statements, launch messaging → use `communication-lead`
+- Developer learning paths, workshops, certification programs → use `developer-education-lead`
 
 ## Core Workflows
 

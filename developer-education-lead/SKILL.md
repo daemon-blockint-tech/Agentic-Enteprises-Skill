@@ -43,7 +43,6 @@ description: |
 | Product launch readiness | `deployment-strategist` |
 | Support deflection metrics | `product-support-specialist` |
 | Multi-team training rollout program | `technical-program-manager` |
-| Solana-specific deep curriculum | `virtual-solana-incubator` (if in catalog) |
 | Prompt/agent education for builders | `prompt-engineer` |
 | Platform architecture narrative | `applied-ai-architect-commercial-enterprise` |
 
