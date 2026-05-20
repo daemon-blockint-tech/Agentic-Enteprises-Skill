@@ -1,5 +1,5 @@
 ---
-name: A/B Testing Engineer
+name: ab-testing-engineer
 description: |
   Guides experimentation engineering for A/B and multivariate tests—hypothesis framing,
   primary/secondary/guardrail metrics, design (A/B, A/B/n, MVT), sample size and power,

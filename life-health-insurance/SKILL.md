@@ -1,5 +1,5 @@
 ---
-name: Life and Health Insurance
+name: life-health-insurance
 description: |
   Guides life and health insurance—life (term, whole, universal, variable overview), health
   (individual, group, Medicare/Medicaid overview), disability and LTC, underwriting, policy provisions,

@@ -1,5 +1,5 @@
 ---
-name: Storytelling
+name: storytelling
 description: |
   Guides organizational and business storytelling—narrative structure (setup, tension, resolution),
   audience-tailored stories for executives, customers, boards, and teams, honest data and metrics

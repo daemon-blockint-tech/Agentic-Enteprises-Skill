@@ -1,5 +1,5 @@
 ---
-name: Actuarial Consulting
+name: actuarial-consulting
 description: |
   Guides actuarial consulting engagements—client scoping and SOW design, stakeholder communication
   (CFO, risk, boards, regulators at overview level), due diligence and M&A actuarial support,

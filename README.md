@@ -47,6 +47,8 @@ npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --agent cursor
 
 After install, start a **new Cursor session** so agents pick up the installed `SKILL.md` files. See [Skills for Cursor](https://www.skills.sh/agent/cursor).
 
+If the [skills.sh package page](https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill) shows fewer skills than this repo, use `npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --list` for the full catalog—the directory index can lag behind GitHub.
+
 ### Other agents
 
 The same CLI targets Claude Code, Codex, GitHub Copilot, Windsurf, Gemini, and others:

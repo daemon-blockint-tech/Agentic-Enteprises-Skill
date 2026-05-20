@@ -1,5 +1,5 @@
 ---
-name: Markup Detection
+name: markup-detection
 description: |
   This skill should be used when the user asks for markup detection, detect manipulation, image tampering,
   deepfake detection, document integrity, hidden markup, metadata forensics, EXIF analysis, content

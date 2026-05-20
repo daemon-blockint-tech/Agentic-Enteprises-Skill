@@ -1,5 +1,5 @@
 ---
-name: Cross-Department Translation
+name: cross-department-translation
 description: |
   Reframes messages, requirements, metrics, and decisions for organizational audiences—engineering,
   product, finance, legal, compliance, sales, operations, actuarial, and executive—by detecting jargon,

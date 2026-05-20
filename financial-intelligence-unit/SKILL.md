@@ -1,5 +1,5 @@
 ---
-name: FIU (Financial Intelligence Unit)
+name: financial-intelligence-unit
 description: |
   This skill should be used when the user asks about FIU, financial intelligence unit, AML FIU,
   case analysis, alert triage, suspicious activity analysis, escalate to MLRO, FIU reporting,

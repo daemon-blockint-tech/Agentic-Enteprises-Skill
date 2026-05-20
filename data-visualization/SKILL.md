@@ -1,5 +1,5 @@
 ---
-name: Data Visualization
+name: data-visualization
 description: |
   Guides data visualization design—chart type selection for message and audience, honest scales
   and labeling, color and accessibility, executive and operational dashboard layout, actuarial and

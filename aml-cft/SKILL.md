@@ -1,5 +1,5 @@
 ---
-name: AML/CFT
+name: aml-cft
 description: |
   This skill should be used when the user asks about AML/CFT, counter-terrorist financing, CFT,
   terrorist financing, proliferation financing, PF, targeted financial sanctions, asset freeze,

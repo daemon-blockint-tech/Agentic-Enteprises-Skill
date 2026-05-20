@@ -1,5 +1,5 @@
 ---
-name: Advanced Short-Term Actuarial Mathematics
+name: advanced-short-term-actuarial-mathematics
 description: |
   Guides advanced short-term actuarial mathematics aligned with SOA ASTAM and P&C/health-adjacent
   modeling—severity and frequency distributions, aggregate and compound loss models, Bühlmann and

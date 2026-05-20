@@ -1,5 +1,5 @@
 ---
-name: Predictive Analytics
+name: predictive-analytics
 description: |
   Guides applied predictive analytics for business—target and leakage framing, tabular feature
   engineering, regression and classification models (baselines, boosting, regularized linear),

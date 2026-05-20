@@ -1,5 +1,5 @@
 ---
-name: Auditor
+name: auditor
 description: |
   This skill should be used when the user asks to plan or execute internal audit, IT audit,
   risk-based audit planning, control testing, audit evidence, workpaper documentation, SOC 2 audit

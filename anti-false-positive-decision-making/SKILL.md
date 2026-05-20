@@ -1,5 +1,5 @@
 ---
-name: Anti-False-Positive Decision Making
+name: anti-false-positive-decision-making
 description: |
   Guides decision frameworks when false positives are costly—thresholds, evidence bars, and escalation
   so actions are not taken on weak signals. Covers FP/FN trade-offs, base rates, corroboration, tiered

@@ -1,5 +1,5 @@
 ---
-name: AML/Compliance
+name: aml-compliance
 description: |
   This skill should be used when the user asks about AML compliance, anti-money laundering, KYC, CDD, EDD,
   PEP screening, sanctions screening, transaction monitoring, SAR, STR, suspicious activity, FATF, BSA,

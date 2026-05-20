@@ -1,5 +1,5 @@
 ---
-name: Associate Actuary
+name: associate-actuary
 description: |
   Guides associate-level actuarial practice for ASA (SOA, US), ASAI (IAI, India), and analogous
   associate credentials—role boundaries vs analyst and fellow/chief actuary; credential pathways

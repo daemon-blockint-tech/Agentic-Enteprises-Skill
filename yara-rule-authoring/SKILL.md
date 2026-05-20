@@ -1,5 +1,5 @@
 ---
-name: YARA Rule Authoring
+name: yara-rule-authoring
 description: |
   Guides authoring, review, optimization, and false-positive debugging of YARA-X detection rules for
   malware identification across PE, script, npm, Office, Chrome extensions (crx module), and Android

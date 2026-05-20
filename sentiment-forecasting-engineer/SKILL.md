@@ -1,5 +1,5 @@
 ---
-name: Sentiment Forecasting Engineer
+name: sentiment-forecasting-engineer
 description: |
   This skill should be used when the user asks to forecast aggregate sentiment and opinion
   dynamics over time—sentiment indices from text streams; temporal rollups; leading/lagging KPI

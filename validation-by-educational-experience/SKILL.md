@@ -1,5 +1,5 @@
 ---
-name: Validation by Educational Experience
+name: validation-by-educational-experience
 description: |
   Guides Validation by Educational Experience (VEE) for North American actuarial credential
   paths (SOA, CAS)—how VEE fits preliminary requirements, current topic areas (Economics,

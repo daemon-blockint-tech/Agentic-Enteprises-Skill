@@ -1,5 +1,5 @@
 ---
-name: Pre-Actuarial Foundations
+name: pre-actuarial-foundations
 description: |
   Guides pre-credential actuarial foundations—probability and statistics for actuaries,
   financial math (interest, annuities, loans, duration intro), insurance risk concepts,

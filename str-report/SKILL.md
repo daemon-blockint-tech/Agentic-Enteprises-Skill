@@ -1,5 +1,5 @@
 ---
-name: STR Report
+name: str-report
 description: |
   This skill should be used when the user asks to draft or structure STR reports, suspicious transaction reports,
   SAR, suspicious activity reports, draft STR, STR narrative, file suspicious activity, AML STR, goAML,

@@ -1,5 +1,5 @@
 ---
-name: Appointed Chief Actuary
+name: appointed-chief-actuary
 description: |
   Guides FSA/FSAI fellow-level appointed and chief actuary work—head of actuarial function,
   statutory reporting accountability (Solvency II, RBC, local appointed-actuary frameworks),

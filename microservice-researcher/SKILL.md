@@ -3,16 +3,15 @@ name: microservice-researcher
 description: |
   Guides research and analysis for microservices architecture decisions—domain decomposition,
   bounded contexts, service boundary options and trade-offs, sync vs async integration patterns,
-  data ownership and consistency (eventual consistency, sagas at research level), API and
-  contract evolution, Team Topologies alignment, build vs buy vs managed services, monolith
-  strangler migration, NFR impact (latency, reliability, operability), and decision records with
-  options and recommendations. Use for microservice research,
-  service boundaries, bounded context, strangler fig, monolith to microservices, saga vs two-phase
-  commit, domain decomposition, microservices trade-off, team topologies,   eventual consistency
-  research, API versioning strategy—not assessing an existing estate (microservices-analyst),
-  production service code (senior-software-engineer, platform-engineer), Kubernetes cluster
-  ops only (cloud-engineer), pure network design (network-backbone-architect), or EDA
-  implementation when building not researching (event-driven-architecture).
+  data ownership and consistency (eventual consistency, sagas at research level), API and contract
+  evolution, Team Topologies alignment, build vs buy vs managed services, monolith strangler
+  migration, NFR impact (latency, reliability, operability), and decision records with options and
+  recommendations. Use for microservice research, service boundaries, bounded context, strangler
+  fig, monolith to microservices, saga vs two-phase commit, domain decomposition, microservices
+  trade-off, team topologies, eventual consistency research, API versioning strategy—not assessing
+  an existing estate (microservices-analyst), production service code (senior-software-engineer,
+  platform-engineer), Kubernetes cluster ops only (cloud-engineer), pure network design
+  (network-backbone-architect), or EDA implementation when building not researching
 ---
 
 # Microservice Researcher

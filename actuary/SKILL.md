@@ -1,5 +1,5 @@
 ---
-name: Actuary
+name: actuary
 description: |
   Guides actuarial work for insurance and reinsurance—pricing and rate adequacy, reserving and IBNR,
   loss development and triangles, mortality/morbidity and lapse assumptions, experience studies and

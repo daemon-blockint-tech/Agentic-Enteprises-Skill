@@ -1,5 +1,5 @@
 ---
-name: Assumption Setting
+name: assumption-setting
 description: |
   Guides defining, documenting, and governing actuarial and risk assumptions for insurance and
   related models—mortality, morbidity, lapse, discount rates, inflation, loss development, expense,

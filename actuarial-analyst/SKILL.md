@@ -1,5 +1,5 @@
 ---
-name: Actuarial Analyst
+name: actuarial-analyst
 description: |
   Guides hands-on actuarial analyst work for insurance, reinsurance, and pension—reserving and loss
   development (IBNR, triangles, chain-ladder diagnostics), pricing and rate indication support

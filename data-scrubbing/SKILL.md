@@ -1,5 +1,5 @@
 ---
-name: Data Scrubbing
+name: data-scrubbing
 description: |
   Guides cleaning and standardizing tabular datasets before analysis, modeling, or reporting—profiling,
   quality rules, missing values, duplicates, outliers, type coercion, encoding fixes, record linkage,

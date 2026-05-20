@@ -1,5 +1,5 @@
 ---
-name: Quantitative Researcher
+name: quantitative-researcher
 description: |
   Guides quantitative research for markets and finance—research question framing, data sourcing
   and quality checks, descriptive and inferential statistics, time series and panel methods (high

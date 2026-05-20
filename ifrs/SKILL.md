@@ -1,5 +1,5 @@
 ---
-name: IFRS
+name: ifrs
 description: |
   This skill should be used when the user asks about IFRS, International Financial Reporting Standards,
   IFRS 15 revenue, IFRS 16 leases, IFRS 9 financial instruments, IFRS 10 consolidation, IAS 36 impairment,

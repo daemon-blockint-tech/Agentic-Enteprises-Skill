@@ -1,5 +1,5 @@
 ---
-name: Advanced Long-Term Actuarial Mathematics
+name: advanced-long-term-actuarial-mathematics
 description: |
   Guides advanced long-term actuarial mathematics (SOA ALTAM)—survival models, life insurance and
   annuity APVs, premiums and reserves (equivalence principle, Thiele), multiple decrement and

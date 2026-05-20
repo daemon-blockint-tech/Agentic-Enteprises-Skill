@@ -1,5 +1,5 @@
 ---
-name: Sentiment Analysis Engineer
+name: sentiment-analysis-engineer
 description: |
   This skill should be used when the user asks to build or evaluate sentiment and opinion-mining
   systems—label schemas, lexicon/ML/transformer/LLM classifiers, annotation and IAA, F1/calibration,

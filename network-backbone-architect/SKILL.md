@@ -1,5 +1,5 @@
 ---
-name: Network Backbone Architect
+name: network-backbone-architect
 description: |
   Design carrier- and enterprise-scale backbone networks—core/distribution/edge topology, OSPF, IS-IS, BGP
   and route policy, WAN/MPLS/SD-WAN, DCI, peering, transit, IX, anycast, ECMP, BFD, FRR, addressing,

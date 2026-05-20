@@ -1,5 +1,5 @@
 ---
-name: Wireless (Wi-Fi) Mobility Specialist
+name: wireless-wifi-mobility-specialist
 description: |
   Enterprise WLAN for mobile users—RF/site surveys, AP placement, 802.11 (Wi-Fi 5/6/6E/7), channel/power
   planning, SSID/VLAN segmentation, WPA3/802.1X/RADIUS, guest/captive portal, roaming (802.11k/r/v, band

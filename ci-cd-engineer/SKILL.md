@@ -1,5 +1,5 @@
 ---
-name: CI/CD Engineer
+name: ci-cd-engineer
 description: |
   Guides CI/CD engineering—pipeline design, build/test/deploy stages, branch and environment strategy,
   artifact promotion, workflow-level deploy patterns (rolling, blue-green, canary), CI secrets, security

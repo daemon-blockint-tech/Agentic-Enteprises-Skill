@@ -1,5 +1,5 @@
 ---
-name: Cryptographer Specialist
+name: cryptographer-specialist
 description: |
   This skill should be used when the user asks for a cryptographer, cryptography review,
   help to choose a cipher (AES-GCM, ChaCha20-Poly1305, ECDH, RSA tradeoffs), key management,

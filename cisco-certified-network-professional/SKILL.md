@@ -1,5 +1,5 @@
 ---
-name: Cisco Certified Network Professional
+name: cisco-certified-network-professional
 description: |
   Guides CCNP-level enterprise campus and WAN networking—VLAN/STP/RSTP/MST, EtherChannel, stacking,
   OSPF/EIGRP/BGP fundamentals, redistribution, FHRP (HSRP/VRRP/GLBP), IPv4/IPv6, WAN/SD-WAN design

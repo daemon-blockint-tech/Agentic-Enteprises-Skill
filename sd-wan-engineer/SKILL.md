@@ -1,5 +1,5 @@
 ---
-name: SD-WAN (Software-Defined WAN) Engineer
+name: sd-wan-engineer
 description: |
   Design, deploy, and operate SD-WAN—overlay WAN (hub-spoke, mesh, regional hubs), underlay overlay (MPLS, broadband, LTE/5G), path selection, application-aware routing, SASE, zero trust WAN, branch connectivity, orchestration templates, NGFW/SWG/ZTNA insertion, HA, and brownfield SD-WAN migration; vendor-agnostic (Viptela, VeloCloud, Prisma SD-WAN). This skill should be used when the user asks about SD-WAN, software-defined WAN, SDWAN engineer, overlay WAN, path selection, application-aware routing, hub-spoke SD-WAN, SASE, zero trust WAN, branch connectivity, underlay overlay, VeloCloud, Viptela, Prisma SD-WAN, WAN optimization, or brownfield SD-WAN migration—not carrier BGP/MPLS backbone-only (network-backbone-architect), cloud VPC design (cloud-architect, cloud-engineer), enterprise APIs (enterprise-integration-api-developer), endpoint security program only (information-security-engineer), or physical DC cabling (infrastructure-engineer).
 ---
