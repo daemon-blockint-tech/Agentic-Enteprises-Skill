@@ -3,9 +3,11 @@
 ## 1. System Overview
 
 **Name:** Agentic Enterprise OS  
-**Version:** 1.0  
-**Scope:** 86 specialized AI agent skills covering full enterprise operations  
+**Version:** 2.0  
+**Scope:** 198 specialized AI agent skills covering full enterprise operations  
 **Purpose:** Enable AI-native organizations where specialized agents handle execution layer across all business functions, with humans at strategic/governance layer
+
+**Distribution:** Published as an installable package on [skills.sh](https://skills.sh) — `npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill`. See [SKILL_REGISTRY.md](SKILL_REGISTRY.md) for the full catalog and layer map.
 
 ---
 
@@ -253,7 +255,7 @@ Layer -1 (Physical)  ─────────┐   │   │   │   │   �
                        ▼
 ┌─────────────────────────────────────────────────────┐
 │              AI Execution Layer                     │
-│  • 86 specialized skills                            │
+│  • 198 specialized skills                           │
 │  • Task routing & handoff                           │
 │  • Quality gates                                    │
 └─────────────────────────────────────────────────────┘
@@ -356,7 +358,7 @@ When a skill completes its work and needs to pass to another skill:
 New skills can be added without modifying existing ones:
 
 ```
-Existing Skills (86) + New Skill = 87 Skills
+Existing Skills (198) + New Skill = 199 Skills
 No breaking changes — routing is via trigger phrases, not hard-coded dependencies
 ```
 
@@ -434,7 +436,7 @@ Same skill set can serve multiple organizations with:
 
 **Agentic Enterprise OS** is a modular, scalable architecture for AI-native organizations. It consists of:
 
-- **86 specialized skills** covering all enterprise functions
+- **198 specialized skills** covering all enterprise functions (installable via [skills.sh](https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill))
 - **6 architectural layers** from physical infrastructure to governance
 - **5 workflow chains** for end-to-end business processes
 - **3 cross-cutting concerns** (validation, governance, management)

@@ -3,7 +3,10 @@
 
 name: ai-product-dev
 description: Build AI-powered product from research to deployment
-version: 1.0.0
+version: 1.1.0
+skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
+skills_registry: .docs/SKILL_REGISTRY.md
+skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
 
 execution_mode: orchestrated
 orchestrator: ai-lead-ops

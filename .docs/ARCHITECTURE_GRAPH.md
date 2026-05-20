@@ -1,4 +1,20 @@
-# Agentic Enterprise OS - Architecture Graph
+# Agentic Enterprise OS — Architecture Graph
+
+**Portfolio size:** 198 skills (v2.0). This diagram shows the **original core graph** (~86 skills) plus structural relationships. Extended domains (actuarial, cloud, AML, networking, supply chain, executive security, etc.) are listed in [SKILL_REGISTRY.md](SKILL_REGISTRY.md) and installable via [skills.sh](https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill).
+
+| Layer | Skills (approx.) |
+|-------|------------------|
+| L5 Governance | 15 |
+| L4 AI/ML | 22 |
+| L3 Data | 19 |
+| L2 Infra/Cloud/Security | 67 |
+| L1 Software | 24 |
+| L0 Business/Actuarial | 45 |
+| L-1 Physical | 6 |
+
+---
+
+## Core architecture graph
 
 ```mermaid
 graph TB
@@ -313,3 +329,43 @@ data-center-portfolio-planning → data-center-design-execution → data-center-
 ```
 business-model-researcher → business-consultant → product-management-human-data → product-designer → customer-ops-specialist → product-support-specialist → community-executive → communication-lead → developer-education-lead → people-operations-specialist
 ```
+
+### Actuarial & insurance chain
+```
+pre-actuarial-foundations → advanced-short-term-actuarial-mathematics / advanced-long-term-actuarial-mathematics → validation-by-educational-experience → actuarial-analyst → associate-actuary → actuary → appointed-chief-actuary
+```
+Parallel line skills: `property-casualty-insurance`, `life-health-insurance`, `pension-retirement-funds`, `assumption-setting`, `asset-liability-management`, `actuarial-consulting`, `ifrs`
+
+### Cloud & FinOps chain
+```
+cloud-architect → enterprise-cloud-architect → cloud-engineer → cloud-security-engineer → cloud-compliance-specialist → finops-analyst → cloud-economist → site-reliability-engineer
+```
+Leadership: `vp-of-cloud`, `vp-of-infrastructure`
+
+### AML & financial crime chain
+```
+aml-cft → aml-compliance → financial-intelligence-unit → str-report → anti-false-positive-decision-making
+```
+
+### Expanded security chain
+```
+cti-analyst → threat-hunter → offensive-security-analyst → defensive-security-analyst → D3FEND (7) → incident-responder → compliance-engineer
+```
+Specialists: `penetration-tester`, `red-team-specialist`, `web-pentester`, `network-pentester`, `enterprise-security-architect`, `chief-information-security-officer`
+
+### Agentic AI chain
+```
+agentic-ai-developer → multi-agent-system-engineer → ai-engineer → ml-infrastructure-engineer-safeguards
+```
+Safeguards: `ml-research-engineer-safeguards`, `privacy-research-engineer-safeguards`, `ai-adversarial-robustness-engineer`, `ai-redteam`
+
+---
+
+## skills.sh package map
+
+| Install target | CLI |
+|----------------|-----|
+| Full package | `npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill` |
+| Single skill | `--skill <folder-name>` |
+| Cursor | `--agent cursor` |
+| Catalog | [SKILL_REGISTRY.md](SKILL_REGISTRY.md) |

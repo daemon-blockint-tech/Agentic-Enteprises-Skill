@@ -2,7 +2,29 @@
 
 ## Overview
 
-This document defines how the 86 skills route, chain, and orchestrate work across the enterprise. It covers routing logic, execution patterns, error handling, state management, and workflow templates.
+This document defines how the **198** skills route, chain, and orchestrate work across the enterprise. It covers routing logic, execution patterns, error handling, state management, workflow templates, and **skills.sh** distribution.
+
+**Package:** `daemon-blockint-tech/Agentic-Enteprises-Skill` — [skills.sh](https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill) · [CLI docs](https://www.skills.sh/docs/cli) · [Cursor](https://www.skills.sh/agent/cursor)
+
+---
+
+## 0. skills.sh discovery and install
+
+External agents discover skills through the [skills CLI](https://www.skills.sh/docs/cli), not a separate registry API:
+
+```bash
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --list
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --skill data-architect --agent cursor -y
+```
+
+| Step | Behavior |
+|------|----------|
+| **List** | Clone package; enumerate all `*/SKILL.md` folders |
+| **Install** | Copy or symlink selected skills into agent paths (e.g. Cursor, Claude Code) |
+| **Route** | Agent loads `description` frontmatter as trigger catalog |
+| **Rank** | Anonymous install telemetry feeds [skills.sh leaderboard](https://skills.sh) |
+
+**In-repo routing** (orchestrator, chains, workflows) uses the same folder names as skills.sh `--skill` arguments. Catalog index: [SKILL_REGISTRY.md](SKILL_REGISTRY.md).
 
 ---
 
@@ -26,7 +48,7 @@ User Request
 └─────────────────────────────────────┘
     ↓
 ┌─────────────────────────────────────┐
-│  Skill Router (86 skills)           │
+│  Skill Router (198 skills)          │
 │  - Match trigger phrases            │
 │  - Check skill availability         │
 │  - Validate dependencies            │

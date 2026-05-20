@@ -175,9 +175,9 @@ Layer -1: PHYSICAL INFRASTRUCTURE
 | [HIGH_LEVEL_DESIGN.md](.docs/HIGH_LEVEL_DESIGN.md) | High-level architecture and system design |
 | [ARCHITECTURE_GRAPH.md](.docs/ARCHITECTURE_GRAPH.md) | Mermaid graph of skills and dependencies |
 | [ORCHESTRATION_ROUTING.md](.docs/ORCHESTRATION_ROUTING.md) | Routing logic, execution modes, state management, error handling |
-| [SKILL_REGISTRY.md](.docs/SKILL_REGISTRY.md) | Skill catalog with triggers, inputs, outputs |
+| [SKILL_REGISTRY.md](.docs/SKILL_REGISTRY.md) | Full 198-skill catalog (layer tables + skills.sh index) |
 
-> **Note:** `.docs/` files were authored against the original **86-skill** baseline. The repo now ships **~198** skills; use each skill's `SKILL.md` as source of truth until registry and graph docs are refreshed.
+> **Note:** `.docs/SKILL_REGISTRY.md` is generated from all `SKILL.md` files (`python3 scripts/generate_docs_registry.py`). Architecture graph shows core relationships; full catalog is in the registry.
 
 ## Workflow Templates
 
@@ -288,7 +288,7 @@ Return: Complete AI product with security and compliance
 
 1. Create skill in `<skill-name>/SKILL.md` (YAML frontmatter + triggers in `description`)
 2. Add references under `references/` as needed
-3. Update [`.docs/SKILL_REGISTRY.md`](.docs/SKILL_REGISTRY.md) and [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md)
+3. Regenerate registry: `python3 scripts/generate_docs_registry.py`; update [`.docs/ARCHITECTURE_GRAPH.md`](.docs/ARCHITECTURE_GRAPH.md) if routing relationships change
 4. Run `build-validator` (or portfolio checks via `ai-skill-manager`) to validate routing and overlap
 
 ---

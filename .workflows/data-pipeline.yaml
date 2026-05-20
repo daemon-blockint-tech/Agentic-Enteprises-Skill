@@ -3,7 +3,10 @@
 
 name: data-pipeline
 description: Build end-to-end data pipeline from architecture to BI dashboard
-version: 1.0.0
+version: 1.1.0
+skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
+skills_registry: .docs/SKILL_REGISTRY.md
+skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
 
 execution_mode: chain
 timeout_per_skill: 300s
