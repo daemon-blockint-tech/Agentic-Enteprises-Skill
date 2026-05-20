@@ -11,7 +11,7 @@
 Agentic Enterprise OS is not a collection of prompts — it's a **modular, layered operating system** for AI-native enterprises. It provides:
 
 - **~198 specialized skills** (one `SKILL.md` per domain folder) across the original 7-layer model plus major expansions
-- **5 workflow chains** for end-to-end operations (YAML templates in `.workflows/`)
+- **8 workflow chains** for end-to-end operations (YAML templates in `.workflows/`, skills.sh install hints)
 - **4 execution modes** for different task complexities
 - **Cross-cutting validation** via `build-validator`
 - **Persistent memory** via `ai-memory-developer`
@@ -151,13 +151,20 @@ Layer 0: BUSINESS & OPERATIONS
 Layer -1: PHYSICAL INFRASTRUCTURE
 ```
 
-### 5 Workflow Chains
+### 8 Workflow Templates
 
-1. **Data Pipeline:** architect → warehouse → analytics → scientist → BI → ops
-2. **Security Ops:** offensive → defensive → D3FEND (7 skills) → compliance → incident
-3. **Revenue Ops:** counsel → deal-ops → accountant → monetization → transaction
-4. **AI Dev Chain:** researcher → research-safeguards → RL-engineering → infra-safeguards → engineer
-5. **Software Dev Chain:** architecture → fullstack → frontend → UI → UX → support
+Executable YAML in [.workflows/](.workflows/) (v1.2.0, skills.sh install chains):
+
+1. **Data Pipeline** — `data-pipeline.yaml`
+2. **Security Ops** — `security-ops.yaml` (CTI → hunt → offensive → D3FEND → compliance → IR)
+3. **Revenue Ops** — `revenue-ops.yaml`
+4. **AI Product Dev** — `ai-product-dev.yaml` (orchestrated)
+5. **Infra Deployment** — `infra-deployment.yaml`
+6. **Cloud & FinOps** — `cloud-finops.yaml`
+7. **Actuarial Credential** — `actuarial-credential.yaml`
+8. **AML Operations** — `aml-operations.yaml`
+
+**Compose manually:** software dev (architecture → fullstack → frontend → UI → UX → support)
 
 ### Cross-Cutting Concerns
 
@@ -181,13 +188,18 @@ Layer -1: PHYSICAL INFRASTRUCTURE
 
 ## Workflow Templates
 
-| Workflow | Description | File |
-|----------|-------------|------|
-| Data Pipeline | End-to-end data pipeline from architecture to BI | [.workflows/data-pipeline.yaml](.workflows/data-pipeline.yaml) |
-| Security Ops | Full security audit with D3FEND response | [.workflows/security-ops.yaml](.workflows/security-ops.yaml) |
-| Revenue Ops | End-to-end revenue operations | [.workflows/revenue-ops.yaml](.workflows/revenue-ops.yaml) |
-| AI Product Dev | Build AI-powered product from research to deployment | [.workflows/ai-product-dev.yaml](.workflows/ai-product-dev.yaml) |
-| Infra Deployment | Deploy infrastructure from design to production | [.workflows/infra-deployment.yaml](.workflows/infra-deployment.yaml) |
+Each workflow includes `package`, `install.chain_cursor` (skills.sh CLI), and `skills_sh_folder` per step. Schema reference: [.workflows/_workflow-schema.yaml](.workflows/_workflow-schema.yaml).
+
+| Workflow | Mode | Description | File |
+|----------|------|-------------|------|
+| Data Pipeline | chain | Architecture → warehouse → analytics → science → BI → ops | [.workflows/data-pipeline.yaml](.workflows/data-pipeline.yaml) |
+| Security Ops | chain | CTI → hunt → offensive → defensive → D3FEND → compliance → IR | [.workflows/security-ops.yaml](.workflows/security-ops.yaml) |
+| Revenue Ops | chain | Counsel → deal ops → accounting → monetization → transactions | [.workflows/revenue-ops.yaml](.workflows/revenue-ops.yaml) |
+| AI Product Dev | orchestrated | Research → safeguards → agentic AI → build → red team → gate | [.workflows/ai-product-dev.yaml](.workflows/ai-product-dev.yaml) |
+| Infra Deployment | chain | Infra → platform → K8s → CI/CD → DevSecOps → SRE → rollout | [.workflows/infra-deployment.yaml](.workflows/infra-deployment.yaml) |
+| Cloud & FinOps | chain | Cloud architecture → security → compliance → FinOps → SRE | [.workflows/cloud-finops.yaml](.workflows/cloud-finops.yaml) |
+| Actuarial Credential | chain | Foundations → exams → VEE → analyst → associate → actuary | [.workflows/actuarial-credential.yaml](.workflows/actuarial-credential.yaml) |
+| AML Operations | chain | AML program → monitoring → FIU → STR → false-positive tuning | [.workflows/aml-operations.yaml](.workflows/aml-operations.yaml) |
 
 ---
 

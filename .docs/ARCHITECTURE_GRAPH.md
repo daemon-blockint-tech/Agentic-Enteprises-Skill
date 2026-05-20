@@ -290,6 +290,8 @@ graph TB
 
 ## Workflow Chains Detail
 
+**Executable templates (v1.2.0):** `.workflows/data-pipeline.yaml`, `security-ops.yaml`, `revenue-ops.yaml`, `ai-product-dev.yaml`, `infra-deployment.yaml`, `cloud-finops.yaml`, `actuarial-credential.yaml`, `aml-operations.yaml` — each includes `package`, `install.chain_cursor`, and `skills_sh_folder` per step.
+
 ### Data Pipeline Chain
 ```
 data-architect → data-warehouse-engineer → analytics-data-engineer → data-scientist → bi-analyst → data-system-ops-lead → data-manager

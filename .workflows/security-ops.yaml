@@ -1,26 +1,73 @@
 # Security Operations Workflow
-# Full security audit with D3FEND response framework
+# CTI → hunt → offensive → defensive → D3FEND (7) → compliance → incident
 
 name: security-ops
-description: Full security audit with D3FEND response framework
-version: 1.1.0
-skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
-skills_registry: .docs/SKILL_REGISTRY.md
-skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+description: Full security audit with threat intel, D3FEND response, and incident closure
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  chain_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill cti-analyst --skill threat-hunter
+    --skill offensive-security-analyst --skill defensive-security-analyst
+    --skill d3fend-harden --skill d3fend-detect --skill d3fend-evict
+    --skill d3fend-isolate --skill d3fend-restore --skill d3fend-model
+    --skill d3fend-deceive --skill compliance-engineer
+    --skill incident-management-engineer --agent cursor -y
 
 execution_mode: chain
 timeout_per_skill: 600s
 max_retries: 1
 
 skills:
-  - name: offensive-security-analyst
+  - name: cti-analyst
+    skills_sh_folder: cti-analyst
     position: 1
+    description: Collect and analyze cyber threat intelligence
+    inputs:
+      - threat_feeds
+      - iocs
+      - industry_context
+      - priority_assets
+    outputs:
+      - threat_brief
+      - ioc_package
+      - hunt_hypotheses
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: threat-hunter
+    skills_sh_folder: threat-hunter
+    position: 2
+    description: Proactive threat hunting based on CTI and telemetry
+    inputs:
+      - threat_brief
+      - ioc_package
+      - log_sources
+      - detection_gaps
+    outputs:
+      - hunt_findings
+      - detection_candidates
+      - scope_recommendations
+    validation:
+      - build-validator:
+          checks: [security]
+
+  - name: offensive-security-analyst
+    skills_sh_folder: offensive-security-analyst
+    position: 3
     description: Conduct penetration testing and vulnerability assessment
     inputs:
+      - hunt_findings
       - target_systems
       - scope
       - attack_vectors
-      - testing_criteria
     outputs:
       - vulnerability_report
       - exploit_demonstrations
@@ -30,10 +77,11 @@ skills:
           checks: [security, compliance]
 
   - name: defensive-security-analyst
-    position: 2
-    description: Conduct defensive security operations and threat hunting
+    skills_sh_folder: defensive-security-analyst
+    position: 4
+    description: Defensive operations and monitoring alignment
     inputs:
-      - vulnerability_report (from offensive-security-analyst)
+      - vulnerability_report
       - threat_intelligence
       - monitoring_data
       - security_policies
@@ -47,10 +95,11 @@ skills:
           checks: [security, compliance]
 
   - name: d3fend-harden
-    position: 3
+    skills_sh_folder: d3fend-harden
+    position: 5
     description: Harden systems against identified threats
     inputs:
-      - defensive_recommendations (from defensive-security-analyst)
+      - defensive_recommendations
       - system_configs
       - hardening_criteria
     outputs:
@@ -62,10 +111,11 @@ skills:
           checks: [security, compliance]
 
   - name: d3fend-detect
-    position: 4
+    skills_sh_folder: d3fend-detect
+    position: 6
     description: Implement threat detection mechanisms
     inputs:
-      - hardening_plan (from d3fend-harden)
+      - hardening_plan
       - detection_criteria
       - monitoring_requirements
     outputs:
@@ -77,10 +127,11 @@ skills:
           checks: [security, performance]
 
   - name: d3fend-evict
-    position: 5
+    skills_sh_folder: d3fend-evict
+    position: 7
     description: Evict identified threats from systems
     inputs:
-      - detection_rules (from d3fend-detect)
+      - detection_rules
       - threat_indicators
       - eviction_criteria
     outputs:
@@ -92,10 +143,11 @@ skills:
           checks: [security, compliance]
 
   - name: d3fend-isolate
-    position: 6
+    skills_sh_folder: d3fend-isolate
+    position: 8
     description: Isolate compromised systems
     inputs:
-      - eviction_plan (from d3fend-evict)
+      - eviction_plan
       - network_topology
       - isolation_criteria
     outputs:
@@ -107,10 +159,11 @@ skills:
           checks: [security, architecture]
 
   - name: d3fend-restore
-    position: 7
+    skills_sh_folder: d3fend-restore
+    position: 9
     description: Restore systems to secure state
     inputs:
-      - isolation_plan (from d3fend-isolate)
+      - isolation_plan
       - backup_data
       - restoration_criteria
     outputs:
@@ -122,10 +175,11 @@ skills:
           checks: [security, architecture, performance]
 
   - name: d3fend-model
-    position: 8
+    skills_sh_folder: d3fend-model
+    position: 10
     description: Model threats and update security posture
     inputs:
-      - restoration_plan (from d3fend-restore)
+      - restoration_plan
       - threat_models
       - modeling_criteria
     outputs:
@@ -137,10 +191,11 @@ skills:
           checks: [security, architecture]
 
   - name: d3fend-deceive
-    position: 9
+    skills_sh_folder: d3fend-deceive
+    position: 11
     description: Implement deception technology
     inputs:
-      - updated_threat_models (from d3fend-model)
+      - updated_threat_models
       - deception_criteria
       - honeypot_requirements
     outputs:
@@ -152,10 +207,11 @@ skills:
           checks: [security, architecture]
 
   - name: compliance-engineer
-    position: 10
-    description: Conduct compliance audit and documentation
+    skills_sh_folder: compliance-engineer
+    position: 12
+    description: Compliance audit and documentation
     inputs:
-      - deception_plan (from d3fend-deceive)
+      - deception_plan
       - compliance_requirements
       - regulatory_rules
       - audit_criteria
@@ -168,10 +224,11 @@ skills:
           checks: [security, compliance]
 
   - name: incident-management-engineer
-    position: 11
-    description: Finalize incident response and post-mortem
+    skills_sh_folder: incident-management-engineer
+    position: 13
+    description: Incident response closure and post-mortem
     inputs:
-      - compliance_report (from compliance-engineer)
+      - compliance_report
       - incident_reports
       - response_procedures
       - stakeholder_lists
@@ -189,6 +246,7 @@ triggers:
   - "security assessment with D3FEND"
   - "end-to-end security operations"
   - "security audit and response"
+  - "threat hunt and remediate"
 
 error_handling:
   on_failure:

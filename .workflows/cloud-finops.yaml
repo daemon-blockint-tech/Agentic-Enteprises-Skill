@@ -1,0 +1,175 @@
+# Cloud & FinOps Workflow
+# Architecture → engineering → security → compliance → cost → SRE
+
+name: cloud-finops
+description: Enterprise cloud landing zone through FinOps and reliability
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  chain_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill cloud-architect --skill enterprise-cloud-architect
+    --skill cloud-engineer --skill cloud-security-engineer
+    --skill cloud-compliance-specialist --skill finops-analyst
+    --skill cloud-economist --skill site-reliability-engineer
+    --agent cursor -y
+
+execution_mode: chain
+timeout_per_skill: 300s
+max_retries: 2
+
+skills:
+  - name: cloud-architect
+    skills_sh_folder: cloud-architect
+    position: 1
+    description: Cloud architecture and workload placement
+    inputs:
+      - business_requirements
+      - compliance_constraints
+      - existing_estate
+    outputs:
+      - architecture_blueprint
+      - service_selection
+      - network_design
+    validation:
+      - build-validator:
+          checks: [architecture, security, cost, compliance]
+
+  - name: enterprise-cloud-architect
+    skills_sh_folder: enterprise-cloud-architect
+    position: 2
+    description: Enterprise landing zone and governance at scale
+    inputs:
+      - architecture_blueprint
+      - org_structure
+      - policy_requirements
+    outputs:
+      - landing_zone_design
+      - governance_model
+      - hybrid_integration_plan
+    validation:
+      - build-validator:
+          checks: [architecture, compliance]
+
+  - name: cloud-engineer
+    skills_sh_folder: cloud-engineer
+    position: 3
+    description: Implement cloud foundations and workloads
+    inputs:
+      - landing_zone_design
+      - iac_standards
+      - workload_specs
+    outputs:
+      - implemented_foundation
+      - workload_deployments
+      - operational_runbooks
+    validation:
+      - build-validator:
+          checks: [architecture, security, performance]
+
+  - name: cloud-security-engineer
+    skills_sh_folder: cloud-security-engineer
+    position: 4
+    description: Cloud security controls and hardening
+    inputs:
+      - implemented_foundation
+      - threat_model
+      - compliance_controls
+    outputs:
+      - security_baseline
+      - control_matrix
+      - remediation_backlog
+    validation:
+      - build-validator:
+          checks: [security, compliance]
+
+  - name: cloud-compliance-specialist
+    skills_sh_folder: cloud-compliance-specialist
+    position: 5
+    description: Cloud compliance evidence and continuous monitoring
+    inputs:
+      - security_baseline
+      - regulatory_frameworks
+      - audit_scope
+    outputs:
+      - compliance_posture
+      - evidence_package
+      - monitoring_plan
+    validation:
+      - build-validator:
+          checks: [compliance, security]
+
+  - name: finops-analyst
+    skills_sh_folder: finops-analyst
+    position: 6
+    description: Cost visibility, allocation, and optimization
+    inputs:
+      - implemented_foundation
+      - billing_data
+      - allocation_model
+    outputs:
+      - cost_dashboards
+      - optimization_recommendations
+      - budget_forecast
+    validation:
+      - build-validator:
+          checks: [cost, architecture]
+
+  - name: cloud-economist
+    skills_sh_folder: cloud-economist
+    position: 7
+    description: Economic modeling and commitment strategy
+    inputs:
+      - budget_forecast
+      - usage_trends
+      - commitment_options
+    outputs:
+      - economic_brief
+      - commitment_recommendations
+      - scenario_analysis
+    validation:
+      - build-validator:
+          checks: [cost, compliance]
+
+  - name: site-reliability-engineer
+    skills_sh_folder: site-reliability-engineer
+    position: 8
+    description: Production SLOs and reliability operations
+    inputs:
+      - implemented_foundation
+      - slo_targets
+      - incident_history
+    outputs:
+      - slo_framework
+      - error_budget_policy
+      - reliability_roadmap
+    validation:
+      - build-validator:
+          checks: [performance, scalability, architecture]
+
+triggers:
+  - "cloud landing zone"
+  - "enterprise cloud program"
+  - "cloud finops review"
+  - "cloud cost optimization"
+  - "cloud compliance audit"
+
+error_handling:
+  on_failure:
+    - retry: true
+      max_retries: 2
+    - fallback: return_error_to_user
+    - notify: true
+
+state_management:
+  persistence: ai-memory-developer
+  context_passing: structured_json
+  validation_points:
+    - after: cloud-architect
+    - after: cloud-security-engineer
+    - after: finops-analyst

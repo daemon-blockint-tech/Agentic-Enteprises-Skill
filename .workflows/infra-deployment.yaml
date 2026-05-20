@@ -1,12 +1,22 @@
 # Infrastructure Deployment Workflow
-# Deploy infrastructure from design to production
+# Design → platform → cluster → CI/CD → DevSecOps → rollout strategy
 
 name: infra-deployment
-description: Deploy infrastructure from design to production
-version: 1.1.0
-skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
-skills_registry: .docs/SKILL_REGISTRY.md
-skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+description: Deploy infrastructure from design to production with secure CI/CD
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  chain_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill infrastructure-engineer --skill platform-engineer
+    --skill cluster-deployment-engineer --skill devops --skill devsecops
+    --skill site-reliability-engineer --skill deployment-strategist
+    --agent cursor -y
 
 execution_mode: chain
 timeout_per_skill: 300s
@@ -14,6 +24,7 @@ max_retries: 2
 
 skills:
   - name: infrastructure-engineer
+    skills_sh_folder: infrastructure-engineer
     position: 1
     description: Design cloud infrastructure
     inputs:
@@ -31,10 +42,11 @@ skills:
           checks: [architecture, security, cost, compliance]
 
   - name: platform-engineer
+    skills_sh_folder: platform-engineer
     position: 2
     description: Build internal developer platform
     inputs:
-      - infrastructure_design (from infrastructure-engineer)
+      - infrastructure_design
       - developer_needs
       - platform_requirements
       - integration_points
@@ -48,10 +60,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: cluster-deployment-engineer
+    skills_sh_folder: cluster-deployment-engineer
     position: 3
     description: Deploy Kubernetes clusters
     inputs:
-      - platform_design (from platform-engineer)
+      - platform_design
       - cluster_requirements
       - container_images
       - scaling_policies
@@ -65,10 +78,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: devops
+    skills_sh_folder: devops
     position: 4
     description: Build CI/CD pipelines and automation
     inputs:
-      - cluster_deployment (from cluster-deployment-engineer)
+      - cluster_deployment
       - application_code
       - deployment_requirements
       - testing_criteria
@@ -82,10 +96,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: devsecops
+    skills_sh_folder: devsecops
     position: 5
     description: Integrate security into CI/CD
     inputs:
-      - cicd_pipelines (from devops)
+      - cicd_pipelines
       - security_requirements
       - vulnerability_scans
       - compliance_rules
@@ -100,11 +115,30 @@ skills:
       - compliance-engineer:
           checks: [security_compliance]
 
-  - name: deployment-strategist
+  - name: site-reliability-engineer
+    skills_sh_folder: site-reliability-engineer
     position: 6
-    description: Design deployment strategy
+    description: Define SLOs, error budgets, and production reliability
     inputs:
-      - secure_pipelines (from devsecops)
+      - secure_pipelines
+      - service_catalog
+      - sla_requirements
+      - observability_stack
+    outputs:
+      - slo_definitions
+      - error_budget_policy
+      - runbooks
+      - alerting_strategy
+    validation:
+      - build-validator:
+          checks: [architecture, performance, scalability]
+
+  - name: deployment-strategist
+    skills_sh_folder: deployment-strategist
+    position: 7
+    description: Design deployment and rollout strategy
+    inputs:
+      - slo_definitions
       - application_specs
       - deployment_requirements
       - risk_tolerance
@@ -137,3 +171,4 @@ state_management:
   validation_points:
     - after: infrastructure-engineer
     - after: devsecops
+    - after: site-reliability-engineer

@@ -1,12 +1,22 @@
 # Revenue Operations Workflow
-# End-to-end revenue operations from legal counsel to transaction principal
+# Legal counsel → deal ops → revenue accounting → monetization → transactions
 
 name: revenue-ops
 description: End-to-end revenue operations from legal counsel to transaction principal
-version: 1.1.0
-skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
-skills_registry: .docs/SKILL_REGISTRY.md
-skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  chain_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill commercial-counsel --skill deal-operations-administrator
+    --skill senior-revenue-accountant --skill product-management-monetization
+    --skill transaction-manager --skill transaction-principal
+    --agent cursor -y
 
 execution_mode: chain
 timeout_per_skill: 300s
@@ -14,6 +24,7 @@ max_retries: 2
 
 skills:
   - name: commercial-counsel
+    skills_sh_folder: commercial-counsel
     position: 1
     description: Review commercial agreements and legal terms
     inputs:
@@ -31,10 +42,11 @@ skills:
           checks: [compliance, security]
 
   - name: deal-operations-administrator
+    skills_sh_folder: deal-operations-administrator
     position: 2
     description: Manage deal operations and contract administration
     inputs:
-      - legal_review (from commercial-counsel)
+      - legal_review
       - deal_terms
       - contract_requirements
       - execution_criteria
@@ -48,10 +60,11 @@ skills:
           checks: [compliance, architecture]
 
   - name: senior-revenue-accountant
+    skills_sh_folder: senior-revenue-accountant
     position: 3
     description: Manage revenue accounting and recognition
     inputs:
-      - deal_execution_plan (from deal-operations-administrator)
+      - deal_execution_plan
       - transaction_data
       - revenue_contracts
       - accounting_standards
@@ -67,10 +80,11 @@ skills:
           checks: [financial_compliance, tax_compliance]
 
   - name: product-management-monetization
+    skills_sh_folder: product-management-monetization
     position: 4
     description: Design product monetization and pricing strategy
     inputs:
-      - revenue_recognition (from senior-revenue-accountant)
+      - revenue_recognition
       - product_specs
       - market_data
       - pricing_requirements
@@ -84,10 +98,11 @@ skills:
           checks: [architecture, cost, compliance]
 
   - name: transaction-manager
+    skills_sh_folder: transaction-manager
     position: 5
     description: Manage transaction workflows and payment processing
     inputs:
-      - monetization_strategy (from product-management-monetization)
+      - monetization_strategy
       - transaction_requirements
       - payment_specs
       - monitoring_criteria
@@ -101,10 +116,11 @@ skills:
           checks: [security, compliance, performance]
 
   - name: transaction-principal
+    skills_sh_folder: transaction-principal
     position: 6
     description: Design transaction architecture and strategic frameworks
     inputs:
-      - transaction_workflows (from transaction-manager)
+      - transaction_workflows
       - business_requirements
       - transaction_volumes
       - scalability_needs

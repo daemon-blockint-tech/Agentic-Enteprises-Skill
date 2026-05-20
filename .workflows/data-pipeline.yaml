@@ -1,12 +1,22 @@
 # Data Pipeline Workflow
-# Build end-to-end data pipeline from architecture to BI dashboard
+# Architecture → warehouse → analytics → science → BI → ops → governance
 
 name: data-pipeline
 description: Build end-to-end data pipeline from architecture to BI dashboard
-version: 1.1.0
-skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
-skills_registry: .docs/SKILL_REGISTRY.md
-skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  chain_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill data-architect --skill data-warehouse-engineer
+    --skill analytics-data-engineer --skill data-scientist
+    --skill bi-analyst --skill data-system-ops-lead --skill data-manager
+    --agent cursor -y
 
 execution_mode: chain
 timeout_per_skill: 300s
@@ -14,6 +24,7 @@ max_retries: 2
 
 skills:
   - name: data-architect
+    skills_sh_folder: data-architect
     position: 1
     description: Design data architecture and schema
     inputs:
@@ -30,10 +41,11 @@ skills:
           checks: [architecture, security, cost, compliance]
 
   - name: data-warehouse-engineer
+    skills_sh_folder: data-warehouse-engineer
     position: 2
     description: Build data warehouse and ETL pipelines
     inputs:
-      - data_architecture_design (from data-architect)
+      - data_architecture_design
       - source_systems
       - transformation_rules
       - performance_requirements
@@ -46,10 +58,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: analytics-data-engineer
+    skills_sh_folder: analytics-data-engineer
     position: 3
     description: Create analytics data pipelines
     inputs:
-      - warehouse_schema (from data-warehouse-engineer)
+      - warehouse_schema
       - analytics_requirements
       - data_sources
       - transformation_rules
@@ -62,10 +75,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: data-scientist
+    skills_sh_folder: data-scientist
     position: 4
     description: Build ML models and statistical analyses
     inputs:
-      - data_pipelines (from analytics-data-engineer)
+      - data_pipelines
       - business_questions
       - feature_requirements
       - model_criteria
@@ -81,10 +95,11 @@ skills:
           checks: [model_risk, data_privacy, bias]
 
   - name: bi-analyst
+    skills_sh_folder: bi-analyst
     position: 5
     description: Create BI dashboards and visualizations
     inputs:
-      - ml_models (from data-scientist)
+      - ml_models
       - business_metrics
       - visualization_requirements
       - stakeholder_needs
@@ -98,10 +113,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: data-system-ops-lead
+    skills_sh_folder: data-system-ops-lead
     position: 6
     description: Set up data operations and monitoring
     inputs:
-      - dashboards (from bi-analyst)
+      - dashboards
       - monitoring_criteria
       - sla_requirements
       - incident_reports
@@ -115,10 +131,11 @@ skills:
           checks: [architecture, security, performance, scalability]
 
   - name: data-manager
+    skills_sh_folder: data-manager
     position: 7
     description: Manage data program and governance
     inputs:
-      - operations_plan (from data-system-ops-lead)
+      - operations_plan
       - governance_policies
       - stakeholder_needs
       - compliance_rules

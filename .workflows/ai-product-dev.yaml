@@ -1,12 +1,24 @@
 # AI Product Development Workflow
-# Build AI-powered product from research to deployment
+# Business research → AI/ML safeguards → engineering → security → compliance → gate
 
 name: ai-product-dev
-description: Build AI-powered product from research to deployment
-version: 1.1.0
-skills_package: daemon-blockint-tech/Agentic-Enteprises-Skill
-skills_registry: .docs/SKILL_REGISTRY.md
-skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+description: Build AI-powered product from research to deployment with safeguards
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  orchestrated_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill business-model-researcher --skill ai-researcher
+    --skill ml-research-engineer-safeguards --skill agentic-ai-developer
+    --skill ml-infrastructure-engineer-safeguards --skill ai-engineer
+    --skill senior-system-architecture --skill senior-fullstack-developer
+    --skill ai-redteam --skill compliance-engineer --skill build-validator
+    --agent cursor -y
 
 execution_mode: orchestrated
 orchestrator: ai-lead-ops
@@ -15,6 +27,7 @@ max_retries: 2
 
 skills:
   - name: business-model-researcher
+    skills_sh_folder: business-model-researcher
     position: 1
     description: Research market and business model feasibility
     inputs:
@@ -32,10 +45,11 @@ skills:
           checks: [architecture, cost]
 
   - name: ai-researcher
+    skills_sh_folder: ai-researcher
     position: 2
     description: Conduct AI research and feasibility study
     inputs:
-      - business_model_analysis (from business-model-researcher)
+      - business_model_analysis
       - research_question
       - hypotheses
       - data_availability
@@ -50,10 +64,11 @@ skills:
           checks: [model_risk, data_privacy, bias]
 
   - name: ml-research-engineer-safeguards
+    skills_sh_folder: ml-research-engineer-safeguards
     position: 3
-    description: Conduct safe ML research with safeguards
+    description: Safe ML research with safeguards
     inputs:
-      - research_findings (from ai-researcher)
+      - research_findings
       - safety_criteria
       - risk_assessments
     outputs:
@@ -66,27 +81,31 @@ skills:
       - ai-risk-governance:
           checks: [model_risk, safety]
 
-  - name: ml-systems-engineer-rl-engineering
+  - name: agentic-ai-developer
+    skills_sh_folder: agentic-ai-developer
     position: 4
-    description: Engineer RL systems and reward optimization
+    description: Design agent loops, tools, and orchestration for the product
     inputs:
-      - safe_research_plan (from ml-research-engineer-safeguards)
-      - rl_requirements
-      - environment_specs
-      - reward_criteria
+      - safe_research_plan
+      - product_requirements
+      - tool_constraints
+      - hitl_requirements
     outputs:
-      - rl_system_design
-      - training_plan
-      - reward_functions
+      - agent_architecture
+      - tool_schemas
+      - orchestration_plan
     validation:
       - build-validator:
-          checks: [architecture, security, performance]
+          checks: [architecture, security]
+      - ai-risk-governance:
+          checks: [agent_risk, tool_safety]
 
   - name: ml-infrastructure-engineer-safeguards
+    skills_sh_folder: ml-infrastructure-engineer-safeguards
     position: 5
-    description: Build ML infrastructure with safety safeguards
+    description: ML infrastructure with safety safeguards
     inputs:
-      - rl_system_design (from ml-systems-engineer-rl-engineering)
+      - agent_architecture
       - infrastructure_requirements
       - safety_criteria
       - deployment_specs
@@ -99,13 +118,14 @@ skills:
           checks: [architecture, security, cost, performance]
 
   - name: ai-engineer
+    skills_sh_folder: ai-engineer
     position: 6
     description: Develop AI application and integrate models
     inputs:
-      - ml_infrastructure_design (from ml-infrastructure-engineer-safeguards)
+      - ml_infrastructure_design
+      - agent_architecture
       - model_specs
       - application_requirements
-      - integration_points
     outputs:
       - ai_application
       - integration_code
@@ -115,10 +135,11 @@ skills:
           checks: [architecture, security, performance]
 
   - name: senior-system-architecture
+    skills_sh_folder: senior-system-architecture
     position: 7
-    description: Design system architecture for AI product
+    description: System architecture for AI product
     inputs:
-      - ai_application (from ai-engineer)
+      - ai_application
       - business_requirements
       - scalability_needs
       - integration_points
@@ -132,10 +153,11 @@ skills:
           checks: [architecture, security, cost, scalability]
 
   - name: senior-fullstack-developer
+    skills_sh_folder: senior-fullstack-developer
     position: 8
-    description: Develop fullstack application
+    description: Fullstack application development
     inputs:
-      - architecture_design (from senior-system-architecture)
+      - architecture_design
       - feature_requirements
       - design_mockups
       - integration_apis
@@ -148,45 +170,46 @@ skills:
       - build-validator:
           checks: [architecture, security, performance]
 
-  - name: cybersecurity
+  - name: ai-redteam
+    skills_sh_folder: ai-redteam
     position: 9
-    description: Conduct security review and hardening
+    description: Adversarial testing of AI and application surfaces
     inputs:
-      - application_code (from senior-fullstack-developer)
-      - threat_intelligence
-      - security_policies
-      - incident_reports
+      - application_code
+      - ai_application
+      - attack_vectors
+      - security_criteria
     outputs:
-      - security_operations_plan
-      - monitoring_setup
-      - threat_detection
-      - incident_response
+      - adversarial_findings
+      - mitigation_recommendations
+      - retest_plan
     validation:
       - build-validator:
           checks: [security, compliance]
 
   - name: compliance-engineer
+    skills_sh_folder: compliance-engineer
     position: 10
-    description: Conduct compliance audit
+    description: Compliance audit and controls
     inputs:
-      - security_operations_plan (from cybersecurity)
+      - adversarial_findings
       - compliance_requirements
       - regulatory_rules
       - audit_criteria
     outputs:
       - compliance_report
       - audit_results
-      - automation_scripts
       - remediation_plan
     validation:
       - build-validator:
           checks: [compliance, security]
 
   - name: build-validator
+    skills_sh_folder: build-validator
     position: 11
     description: Final quality gate
     inputs:
-      - compliance_report (from compliance-engineer)
+      - compliance_report
       - all_previous_outputs
     outputs:
       - validation_report
@@ -202,6 +225,7 @@ triggers:
   - "AI product from scratch"
   - "end-to-end AI development"
   - "AI product launch"
+  - "agentic product build"
 
 error_handling:
   on_failure:
@@ -213,8 +237,9 @@ error_handling:
 state_management:
   persistence: ai-memory-developer
   context_passing: structured_json
+  orchestrator_skill: ai-lead-ops
   validation_points:
     - after: ai-researcher
     - after: ml-research-engineer-safeguards
-    - after: ai-engineer
-    - after: cybersecurity
+    - after: agentic-ai-developer
+    - after: ai-redteam

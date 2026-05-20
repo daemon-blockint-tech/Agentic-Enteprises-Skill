@@ -1,0 +1,15 @@
+# Reference schema for Agentic Enterprise OS workflows (not executed directly).
+# Copy fields into each workflow YAML under .workflows/
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  skill_count: 198
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+  cli_docs: https://www.skills.sh/docs/cli
+  cursor_docs: https://www.skills.sh/agent/cursor
+
+install:
+  list: npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --list
+  all_cursor: npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --agent cursor -y
+  one_skill: npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --skill <folder> --agent cursor -y

@@ -1,0 +1,125 @@
+# AML & Financial Crime Workflow
+# AML/CFT → compliance → FIU → STR → false-positive tuning
+
+name: aml-operations
+description: End-to-end AML program from policy through investigation and reporting
+version: 1.2.0
+
+package:
+  id: daemon-blockint-tech/Agentic-Enteprises-Skill
+  registry: .docs/SKILL_REGISTRY.md
+  skills_sh: https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill
+
+install:
+  chain_cursor: >-
+    npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill
+    --skill aml-cft --skill aml-compliance
+    --skill financial-intelligence-unit --skill str-report
+    --skill anti-false-positive-decision-making
+    --agent cursor -y
+
+execution_mode: chain
+timeout_per_skill: 300s
+max_retries: 2
+
+skills:
+  - name: aml-cft
+    skills_sh_folder: aml-cft
+    position: 1
+    description: AML/CFT program design and risk assessment
+    inputs:
+      - business_model
+      - jurisdictions
+      - customer_segments
+    outputs:
+      - aml_risk_assessment
+      - program_outline
+      - control_catalog
+    validation:
+      - build-validator:
+          checks: [compliance, security]
+
+  - name: aml-compliance
+    skills_sh_folder: aml-compliance
+    position: 2
+    description: Operationalize AML controls and monitoring rules
+    inputs:
+      - aml_risk_assessment
+      - transaction_monitoring_stack
+      - policy_requirements
+    outputs:
+      - monitoring_rules
+      - kyc_cdd_procedures
+      - training_plan
+    validation:
+      - build-validator:
+          checks: [compliance]
+
+  - name: financial-intelligence-unit
+    skills_sh_folder: financial-intelligence-unit
+    position: 3
+    description: Investigate alerts and case management
+    inputs:
+      - monitoring_rules
+      - alert_queue
+      - customer_data
+    outputs:
+      - investigation_cases
+      - escalation_decisions
+      - evidence_packages
+    validation:
+      - build-validator:
+          checks: [compliance, security]
+
+  - name: str-report
+    skills_sh_folder: str-report
+    position: 4
+    description: Draft suspicious transaction reports and regulatory filings
+    inputs:
+      - investigation_cases
+      - filing_requirements
+      - legal_review_criteria
+    outputs:
+      - str_drafts
+      - filing_checklist
+      - audit_trail
+    validation:
+      - build-validator:
+          checks: [compliance, security]
+
+  - name: anti-false-positive-decision-making
+    skills_sh_folder: anti-false-positive-decision-making
+    position: 5
+    description: Tune rules and decision thresholds to reduce false positives
+    inputs:
+      - alert_metrics
+      - investigation_outcomes
+      - business_constraints
+    outputs:
+      - tuning_recommendations
+      - threshold_matrix
+      - model_governance_memo
+    validation:
+      - build-validator:
+          checks: [compliance, architecture]
+
+triggers:
+  - "AML program setup"
+  - "suspicious activity workflow"
+  - "STR filing process"
+  - "reduce AML false positives"
+  - "financial crime operations"
+
+error_handling:
+  on_failure:
+    - retry: true
+      max_retries: 2
+    - fallback: escalate_to_compliance
+    - notify: true
+
+state_management:
+  persistence: ai-memory-developer
+  context_passing: structured_json
+  validation_points:
+    - after: aml-compliance
+    - after: financial-intelligence-unit
