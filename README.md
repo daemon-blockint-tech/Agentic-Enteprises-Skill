@@ -2,6 +2,8 @@
 
 **~200-Skill Operating System for AI-Native Enterprises**
 
+[![skills.sh](https://skills.sh/b/daemon-blockint-tech/Agentic-Enteprises-Skill)](https://skills.sh/daemon-blockint-tech/Agentic-Enteprises-Skill)
+
 ---
 
 ## Overview
@@ -16,6 +18,55 @@ Agentic Enterprise OS is not a collection of prompts — it's a **modular, layer
 - **Dynamic routing** via `ai-skill-manager`
 
 Recent expansions add depth in **actuarial and insurance**, **cloud and FinOps**, **SRE and resilience**, **predictive analytics**, **ML safeguards and agentic AI**, **AML and financial crime**, **supply chain**, **OT/ICS and networking**, and a **broader security portfolio** (CTI, pentest, formal methods, vendor risk, executive security roles).
+
+---
+
+## Install via skills.sh
+
+This package is installable from the [Agent Skills directory](https://skills.sh) using the open-source [skills CLI](https://www.skills.sh/docs/cli) (`npx skills add` — no global install required).
+
+**Source:** [github.com/daemon-blockint-tech/Agentic-Enteprises-Skill](https://github.com/daemon-blockint-tech/Agentic-Enteprises-Skill)
+
+### Cursor
+
+Run from the **root of the project** where you want skills available (your app repo, not necessarily this catalog clone):
+
+```bash
+# Browse ~197 skills in this package
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --list
+
+# Install specific skills for Cursor
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill \
+  --skill cloud-architect \
+  --skill compliance-engineer \
+  --agent cursor -y
+
+# Interactive picker
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --agent cursor
+```
+
+After install, start a **new Cursor session** so agents pick up the installed `SKILL.md` files. See [Skills for Cursor](https://www.skills.sh/agent/cursor).
+
+### Other agents
+
+The same CLI targets Claude Code, Codex, GitHub Copilot, Windsurf, Gemini, and others:
+
+```bash
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --agent claude-code -y
+npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill --agent '*' -y   # all supported agents
+```
+
+More: [skills.sh documentation](https://www.skills.sh/docs).
+
+### Clone vs install
+
+| Approach | When to use |
+|----------|-------------|
+| **`npx skills add …`** | Install skills into another project's agent paths (recommended for day-to-day work in Cursor, etc.) |
+| **Clone this repo** | Browse the catalog, contribute skills, or point an agent at `<skill-name>/SKILL.md` in-tree |
+| **Fork** | Maintain a private or customized enterprise skill portfolio |
+
+Leaderboard ranking uses anonymous install telemetry from the CLI ([how skills are ranked](https://www.skills.sh/docs)). Opt out: `DISABLE_TELEMETRY=1`.
 
 ---
 
@@ -74,7 +125,7 @@ Each skill lives in `<skill-name>/SKILL.md` with YAML frontmatter (`name`, `desc
 | **Run a workflow** | Pick a template under [`.workflows/`](.workflows/) (data pipeline, security ops, revenue ops, AI product dev, infra deployment) |
 | **Add a skill** | Create `<skill-name>/SKILL.md`, then update registry and architecture docs (see Contributing) |
 
-**Agent clients (Cursor, Claude Code, etc.):** point the client at this repository (or copy skill folders into your skills path). Skills are discovered from installed `SKILL.md` files; no separate runtime is required beyond your agent host.
+**Agent clients (Cursor, Claude Code, etc.):** prefer [`npx skills add daemon-blockint-tech/Agentic-Enteprises-Skill`](#install-via-skillssh) for installs into your project; alternatively clone this repo or copy `<skill-name>/` folders into your agent skills path. Skills are discovered from `SKILL.md` files; no separate runtime is required beyond your agent host.
 
 ---
 

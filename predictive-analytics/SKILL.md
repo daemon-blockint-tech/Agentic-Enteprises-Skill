@@ -1,22 +1,17 @@
 ---
 name: Predictive Analytics
 description: |
-  Guides applied predictive analytics for business—problem framing (target, leakage, unit of
-  analysis, horizon), tabular feature engineering and selection, regression and classification
-  model families (baselines, gradient boosting, regularized linear), train/validation splits
-  (including time-based), metrics, calibration, thresholding and cost-sensitive decisions,
-  practitioner explainability (feature importance, SHAP concepts), conceptual deployment
-  monitoring (drift, retrain triggers), and stakeholder communication with uncertainty and
-  limitations. Use cases include churn, demand forecasting, fraud scores, propensity, and
-  operational risk scoring (not actuarial reserving). Use when the user mentions "predictive
+  Guides applied predictive analytics for business—target and leakage framing, tabular feature
+  engineering, regression and classification models (baselines, boosting, regularized linear),
+  validation splits and metrics, calibration and cost-sensitive thresholds, practitioner
+  explainability (importance, SHAP), drift monitoring concepts, and uncertainty comms. Covers
+  churn, demand, fraud, propensity, risk scores—not actuarial reserving. Use for "predictive
   analytics", "build a predictive model", "propensity model", "churn prediction", "demand
-  forecast model", "classification model", "feature engineering", "model validation", "predict
-  customer behavior", "risk score model", or "predictive modeling workflow". Not for MLOps
-  platform engineering (ml-infrastructure-engineer-safeguards), deep learning research
-  (ml-research-engineer-safeguards), actuarial reserving/pricing (actuarial-analyst,
-  advanced-short-term-actuarial-mathematics), BI dashboard-only work (data-visualization,
-  bi-analyst), warehouse/dbt modeling only (data-warehouse-engineer, analytics-data-engineer),
-  or A/B experiment design (ab-testing-engineer).
+  forecast model", "classification model", "feature engineering", "model validation",
+  "predict customer behavior", "risk score model", or "predictive modeling workflow". Not for
+  MLOps (ml-infrastructure-engineer-safeguards), DL research (ml-research-engineer-safeguards),
+  actuarial reserving (actuarial-analyst), BI only (data-visualization), warehouse/dbt only
+  (data-warehouse-engineer, analytics-data-engineer), or A/B tests (ab-testing-engineer).
 ---
 
 # Predictive Analytics

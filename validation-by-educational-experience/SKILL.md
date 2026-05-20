@@ -1,85 +1,144 @@
 ---
-name: validation-by-educational-experience
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+name: Validation by Educational Experience
+description: |
+  Guides Validation by Educational Experience (VEE) for North American actuarial credential
+  paths (SOA, CAS)—how VEE fits preliminary requirements, current topic areas (Economics,
+  Accounting & Finance, Mathematical Statistics; subject to society updates), approved-course
+  criteria, candidate workflow and documentation, SOA vs CAS submission timing relative to
+  ASA/ACAS progress, international/transfer considerations, and common pitfalls. Use for
+  VEE, validation by educational experience, VEE credit, actuarial VEE requirements, SOA VEE,
+  CAS VEE, VEE economics, VEE statistics, VEE accounting and finance, college credit for
+  actuarial exams, submit VEE transcript—not deep exam study (pre-actuarial-foundations,
+  advanced-short-term-actuarial-mathematics, advanced-long-term-actuarial-mathematics),
+  workpapers (actuarial-analyst), signing (associate-actuary, appointed-chief-actuary),
+  official transcript qualification rulings, or generic degree planning.
 ---
 
-# Validation By Educational Experience
+# Validation by Educational Experience (VEE)
 
-## Overview
+## When to Use
 
-[TODO: 1-2 sentences explaining what this skill enables]
+- Explain **what VEE is** and how it differs from passing preliminary exams (exam waiver via coursework, not professional sign-off)
+- Orient **current VEE topic areas** and how societies may update requirements—always flag official SOA/CAS sources
+- Help candidates **select courses**, compare syllabus fit, and plan timing with preliminary exams and internships
+- Outline **approved-course criteria** and how institutions get courses listed (framework only)
+- Structure **documentation and submission** workflows for SOA vs CAS
+- Advise on **international students**, transfer credits, and online providers at overview level
+- Diagnose **common pitfalls** (wrong course, grade, expired policy, incomplete forms)
+- Bridge learners from **pre-actuarial coursework** toward credential progress and `associate-actuary`
 
-## Structuring This Skill
+## When NOT to Use
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+- Deep study of economics, corporate finance, or statistics exam content → `pre-actuarial-foundations`; ASTAM/ALTAM depth → `advanced-short-term-actuarial-mathematics`, `advanced-long-term-actuarial-mathematics`
+- Reserving, pricing workpapers, triangles, model packs → `actuarial-analyst`
+- ASA/ACAS pathway strategy, ethics, signing limits, peer review → `associate-actuary`
+- Appointed actuary, enterprise governance, regulatory opinions → `actuary`, `appointed-chief-actuary`
+- **Official determination** whether a specific transcript or course qualifies → direct user to SOA/CAS VEE administration and the institution; do not guarantee approval
+- Generic university degree planning unrelated to actuarial credential requirements → academic advising unless reframed to VEE
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" → "Reading" → "Creating" → "Editing"
-- Structure: ## Overview → ## Workflow Decision Tree → ## Step 1 → ## Step 2...
+## Related skills
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" → "Merge PDFs" → "Split PDFs" → "Extract Text"
-- Structure: ## Overview → ## Quick Start → ## Task Category 1 → ## Task Category 2...
+| Need | Skill |
+|---|---|
+| Pre-credential math, study habits, preliminary exam orientation | `pre-actuarial-foundations` |
+| Hands-on reserving, pricing, workpapers | `actuarial-analyst` |
+| ASA/ACAS pathways, ethics, signing, career progression | `associate-actuary` |
+| Technical pricing, reserving, capital (fellow-level overview) | `actuary` |
+| Appointed actuary accountability and enterprise governance | `appointed-chief-actuary` |
+| Short-term loss models and credibility (post-preliminary) | `advanced-short-term-actuarial-mathematics` |
+| Long-term life contingencies (post-preliminary) | `advanced-long-term-actuarial-mathematics` |
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" → "Colors" → "Typography" → "Features"
-- Structure: ## Overview → ## Guidelines → ## Specifications → ## Usage...
+## Core Workflows
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" → numbered capability list
-- Structure: ## Overview → ## Core Capabilities → ### 1. Feature → ### 2. Feature...
+### 1. Candidate intake and society path
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+Before recommending courses:
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+1. **Society** — SOA vs CAS (requirements and submission portals differ)
+2. **Status** — Student, career-switcher, international; prior degrees and transfer credits
+3. **Goal** — Which VEE topics remain; target ASA/ACAS timeline
+4. **Deliverable** — Course plan, checklist, submission prep—not society ruling on a transcript
+5. **Escalation** — Route exam-depth tutoring to `pre-actuarial-foundations`; professional work to `actuarial-analyst`
 
-## [TODO: Replace with the first main section based on chosen structure]
+**See `references/vee_scope_and_pathway.md`.**
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+### 2. Map VEE topics and official requirements
 
-## Resources
+1. List **VEE subject areas** at framework level (Economics; Accounting & Finance; Mathematical Statistics—names and splits may change)
+2. State that **SOA and CAS publish authoritative lists** of approved courses and online options
+3. Distinguish **VEE completion** from preliminary exams (P, FM, etc.) and from fellowship requirements
+4. Note **policy refresh** risk—summaries in this skill are not substitutes for live society pages
+5. Link topic gaps to `pre-actuarial-foundations` for conceptual study, not for credit approval
 
-This skill includes example resource directories that demonstrate how to organize different types of bundled resources:
+**See `references/vee_topic_areas.md`.**
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+### 3. Course selection and syllabus fit
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+1. Compare **course title, catalog description, and syllabus** to society topic learning objectives (high level)
+2. Prefer **pre-approved** university courses or society-listed online programs when available
+3. Confirm **grade minimums**, credit hours, and term-level vs AP/IB rules per current policy
+4. Flag **duplicate coverage** across transfer, MOOC, and degree programs
+5. Never assert approval without society or school registrar confirmation
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+**See `references/approved_courses_and_syllabus_fit.md`.**
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Claude for patching or environment adjustments.
+### 4. Documentation and candidate workflow
 
-### references/
-Documentation and reference material intended to be loaded into context to inform Claude's process and thinking.
+1. Build a **transcript and syllabus packet** checklist (unofficial vs official, seals, translations)
+2. Track **in-progress** vs completed courses; timing of final grades
+3. Overview **online providers** (university extensions, ACTEX, TIA, etc.) as categories—not endorsements
+4. Separate **university registrar** steps from **society submission** steps
+5. Maintain an **audit trail** of dates, reference numbers, and resubmission needs
 
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
+**See `references/candidate_workflow_and_documentation.md`.**
 
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Claude should reference while working.
+### 5. SOA vs CAS submission and timing
 
-### assets/
-Files not intended to be loaded into context, but rather used within the output Claude produces.
+1. Map **which portal and forms** apply per society (overview only)
+2. Place VEE relative to **ASA/ACAS** milestones and preliminary exam progress
+3. Advise on **ordering**: completing coursework before submission vs before fellowship modules (society-specific)
+4. Note **expiration or versioning** of VEE policies where societies publish them
+5. Escalate **credential strategy** to `associate-actuary` when user focuses on signing or professionalism
 
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
+**See `references/soa_cas_submission_and_timing.md`.**
 
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
+### 6. Pitfalls and planning
 
----
+1. Run a **pre-submission checklist**: course code, grade, term, syllabus, society account linkage
+2. Document **common denials**: non-approved course, insufficient grade, wrong topic bucket, missing syllabus
+3. Plan **retakes and alternatives** when a course fails fit
+4. Address **international transcripts**, language, and credit conversion at high level
+5. Connect **pre-actuarial** study plans so VEE topics reinforce preliminary exams without double-counting effort blindly
 
-**Any unneeded directories can be deleted.** Not every skill requires all three types of resources.
+**See `references/pitfalls_and_planning.md`.**
+
+## Deliverable standards
+
+| Deliverable | Minimum content |
+|---|---|
+| VEE plan | Society, topics outstanding, course options, grade/credit checks, target dates |
+| Submission checklist | Documents, portals, fees (if published), status tracking fields |
+| Pitfall review | Course-society fit risks, policy date, escalation to official admin |
+| International note | Translation/registrar steps; no immigration or visa advice |
+
+Label output as **educational and procedural guidance**, not actuarial advice, legal advice, or an official society determination.
+
+## Assignment type matrix
+
+| Trigger phrase | Primary workflow | Lead reference |
+|---|---|---|
+| what is VEE / actuarial VEE requirements | Scope and pathway | `vee_scope_and_pathway.md` |
+| VEE economics / statistics / accounting and finance | Topic map | `vee_topic_areas.md` |
+| approved course / syllabus fit | Course selection | `approved_courses_and_syllabus_fit.md` |
+| submit VEE transcript / documentation | Candidate workflow | `candidate_workflow_and_documentation.md` |
+| SOA VEE / CAS VEE / timing with ASA | Submission and timing | `soa_cas_submission_and_timing.md` |
+| VEE denied / wrong course | Pitfalls and planning | `pitfalls_and_planning.md` |
+
+## When to load references
+
+- **Scope, pathway, boundaries** → `references/vee_scope_and_pathway.md`
+- **Topic areas and society updates** → `references/vee_topic_areas.md`
+- **Approved courses and syllabus fit** → `references/approved_courses_and_syllabus_fit.md`
+- **Workflow and documentation** → `references/candidate_workflow_and_documentation.md`
+- **SOA vs CAS submission** → `references/soa_cas_submission_and_timing.md`
+- **Pitfalls and planning** → `references/pitfalls_and_planning.md`
